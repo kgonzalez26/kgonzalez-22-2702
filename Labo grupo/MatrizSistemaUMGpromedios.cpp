@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <iomanip>
-
+#include <string.h>
 #include <cstdlib>
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,15 +10,12 @@
 using namespace std;
 
 const int NUMERO_ALUMNOS = 10;
-const int NUMERO_ALUMNO = 10;
 const int NUMERO_FACULTADES = 3;
 const int MAX_LONGITUD_CADENA = 100;
 
 int busquedaAleatorios(int minimo, int maximo);
 
-
 void notasAlumno();
-
 
 const int PPARCIAL = 1;
 const int NOTA = 1;
@@ -43,6 +40,7 @@ void llenarMatriz3(float matriz3[NUMERO_ALUMNOS][PARCIALF+1]);
 void llenarMatriz4(float matriz4[NUMERO_ALUMNOS][RECUPERA+1]);
 void imprimirLineaMatriz();
 void imprimirMatriz (float matriz [NUMERO_ALUMNOS][PPARCIAL+1] , float matriz1 [NUMERO_ALUMNOS][NOTA+1] , float matriz2 [NUMERO_ALUMNOS][SPARCIAL+1], float matriz3 [NUMERO_ALUMNOS][PARCIALF+1], float matriz4[NUMERO_ALUMNOS][RECUPERA+1], char alumnos[NUMERO_ALUMNOS][MAX_LONGITUD_CADENA]);
+void imprimirMatriz2 (float matriz [NUMERO_ALUMNOS][PPARCIAL+1] , float matriz1 [NUMERO_ALUMNOS][NOTA+1] , float matriz2 [NUMERO_ALUMNOS][SPARCIAL+1], float matriz3 [NUMERO_ALUMNOS][PARCIALF+1], float matriz4[NUMERO_ALUMNOS][RECUPERA+1], char alumnos[NUMERO_ALUMNOS][MAX_LONGITUD_CADENA]);
 
 void promedioFacultades();
 void promedioComparacion();
@@ -261,9 +259,6 @@ void llenarMatriz4(float matriz4[NUMERO_ALUMNOS][RECUPERA+1]) //llenado de matri
 
  void imprimirMatriz (float matriz [NUMERO_ALUMNOS][PPARCIAL+1] , float matriz1 [NUMERO_ALUMNOS][NOTA+1] , float matriz2 [NUMERO_ALUMNOS][SPARCIAL+1], float matriz3 [NUMERO_ALUMNOS][PARCIALF+1], float matriz4 [NUMERO_ALUMNOS][RECUPERA+1], char alumnos[NUMERO_ALUMNOS][MAX_LONGITUD_CADENA])
 {
-
-
-
     float promedioMayor = matriz[0][PPARCIAL]; //matriz
     float promedioMenor = matriz[0][PPARCIAL]; //matriz
     float promedioMayor1 = matriz1[0][NOTA]; //matriz
@@ -362,6 +357,11 @@ void llenarMatriz4(float matriz4[NUMERO_ALUMNOS][RECUPERA+1]) //llenado de matri
                 cout<<"\t"<< fixed << setprecision(2)<< (double) zona1<<"    |";
                 float promedio = (zona1)/3;
                 cout<<"\t"<< fixed << setprecision(2)<< (double) promedio<<"    |\n";
+                if(zona>notaMayor)
+                {
+                    notaMayor=zona1;//95% de exito
+                    alumnoMayor= y;
+                }
 
         }else
         {
@@ -393,6 +393,187 @@ void llenarMatriz4(float matriz4[NUMERO_ALUMNOS][RECUPERA+1]) //llenado de matri
 
 }
 
+
+ void imprimirMatriz2 (float matriz [NUMERO_ALUMNOS][PPARCIAL+1] , float matriz1 [NUMERO_ALUMNOS][NOTA+1] , float matriz2 [NUMERO_ALUMNOS][SPARCIAL+1], float matriz3 [NUMERO_ALUMNOS][PARCIALF+1], float matriz4 [NUMERO_ALUMNOS][RECUPERA+1], char alumnos[NUMERO_ALUMNOS][MAX_LONGITUD_CADENA])
+{
+
+    float mejorFac=0;
+    float mejorFacNum=0;
+    float notaMayor;
+    int mejorAlumFac=0;
+    float mejorAlumFacNum=0;
+    float promedioGenFac=0;
+    char facultades[NUMERO_FACULTADES][MAX_LONGITUD_CADENA] = {"Facultad de Ingenieria","Facultad de Arquitectura","Facultad de Medicina"};
+
+
+    for (int f = 0; f < NUMERO_FACULTADES; f++)
+    {
+        llenarMatriz(matriz);
+        llenarMatriz1(matriz1);
+        llenarMatriz2(matriz2);
+        llenarMatriz2(matriz3);
+        llenarMatriz4(matriz4);
+
+        cout << "\n\nNotas para la " << facultades[f] << endl;
+
+        float promedioMayor = matriz[0][PPARCIAL]; //matriz
+        float promedioMenor = matriz[0][PPARCIAL]; //matriz
+        float promedioMayor1 = matriz1[0][NOTA]; //matriz
+        float promedioMenor1 = matriz1[0][NOTA]; //matriz
+        float promedioMayor2 = matriz2[0][SPARCIAL]; //matriz
+        float promedioMenor2 = matriz2[0][SPARCIAL]; //matriz
+        float promedioMayor3 = matriz3[0][PARCIALF]; //matriz
+        float promedioMenor3 = matriz3[0][PARCIALF]; //matriz
+        float promedioMayor4 = matriz4[0][RECUPERA]; //matriz
+        float promedioMenor4 = matriz4[0][RECUPERA]; //matriz
+        char alumnoPromedioMayor [MAX_LONGITUD_CADENA]; //vector
+        char alumnoPromedioMenor [MAX_LONGITUD_CADENA]; //vector
+
+        memcpy(alumnoPromedioMayor, alumnos[0], MAX_LONGITUD_CADENA);
+        memcpy(alumnoPromedioMenor, alumnos[0], MAX_LONGITUD_CADENA);
+        imprimirLineaMatriz();
+        cout <<"|  Alumno  |";
+        for (int x=0; x < NOTA; x++)
+        {
+            cout<<"NOTA   |";
+        }
+        for (int x=0; x < PPARCIAL; x++)
+        {
+            cout<<"Primer Parcial|";
+        }
+        for (int x=0; x < SPARCIAL; x++)
+        {
+            cout<<"Segundo Parcial|";
+        }
+        for (int x=0; x < PARCIALF; x++)
+        {
+            cout<<"Parcial Final|";
+        }
+        for (int x=0; x < RECUPERA; x++)
+        {
+            cout<<"Recuperacion   |";
+        }
+        cout <<("Total Zona     |");
+        cout <<("promedio       |\n");
+        imprimirLineaMatriz();
+        float notaMayor=0;
+        float alumnoMayor;
+        for (int y=0; y< NUMERO_ALUMNOS; y++)
+        {
+            cout <<"|  "<<alumnos[y]<<"   |";
+            float suma = 0;
+            for (int x=0; x< NOTA; x++)
+            {
+                int calificacion = matriz[y][x];
+                cout <<"  "<<calificacion<<"  |";
+            }
+            for (int x=0; x< PPARCIAL; x++)
+            {
+                int calificacion = matriz1[y][x];
+                cout <<"\t"<<calificacion<<"\t|";
+            }
+            for (int x=0; x< SPARCIAL; x++)
+            {
+                int calificacion = matriz2[y][x];
+                cout <<"\t"<<calificacion<<"\t|";
+            }
+            float zonaPasar = matriz [y][PPARCIAL]+matriz1 [y][NOTA]+matriz2 [y][SPARCIAL];
+            float zona = matriz [y][PPARCIAL]+matriz1 [y][NOTA]+matriz2 [y][SPARCIAL]+matriz3 [y][PARCIALF];
+            promedioGenFac+=zona;
+            if (zonaPasar <=25)
+            {
+                for (int x=0; x< PARCIALF; x++)
+                {
+                    int calificacion = matriz3[y][x]-matriz3[y][x];
+                    cout <<"\t"<<calificacion<<"\t|";
+                }
+
+                for (int x=0; x< RECUPERA; x++)
+                {
+                    int calificacion = matriz4[y][x]-matriz4[y][x];
+                    cout <<"\t"<<calificacion<<"\t|";
+                }
+                float zonaPasar = matriz [y][PPARCIAL]+matriz1 [y][NOTA]+matriz2 [y][SPARCIAL];
+                cout<<"\t"<< fixed << setprecision(2)<< (double) zonaPasar<<"    |";
+                float promedio = (zonaPasar)/4;
+                cout<<"\t"<< fixed << setprecision(2)<< (double) promedio<<"    |\n";
+
+            }
+            else if (zona <=60)
+            {
+                for (int x=0; x< PARCIALF; x++)
+                {
+                    int calificacion = matriz3[y][x];
+                    cout <<"\t"<<calificacion<<"\t|";
+                }
+                for (int x=0; x< RECUPERA; x++)
+                {
+                    int calificacion = matriz4[y][x];
+                    cout <<"\t"<<calificacion<<"\t|";
+                }
+                float zona1 = matriz [y][PPARCIAL]+matriz1 [y][NOTA]+matriz2 [y][SPARCIAL]+matriz4 [y][RECUPERA];
+                cout<<"\t"<< fixed << setprecision(2)<< (double) zona1<<"    |";
+                float promedio = (zona1)/3;
+                cout<<"\t"<< fixed << setprecision(2)<< (double) promedio<<"    |\n";
+                if(zona1>notaMayor)
+                {
+                    notaMayor=zona1;//95% de exito
+                    alumnoMayor= y;
+                }
+
+            }else
+            {
+                for (int x=0; x< PARCIALF; x++)
+                {
+                    int calificacion = matriz3[y][x];
+                    cout <<"\t"<<calificacion<<"\t|";
+                }
+                for (int x=0; x< RECUPERA; x++)
+                {
+                    int calificacion = matriz4[y][x]-matriz4[y][x];
+                    cout <<"\t"<<calificacion<<"\t|";
+                }
+                cout<<"\t"<< fixed << setprecision(2)<< (double) zona<<"    |";
+                float promedio = (zona)/4;
+                cout<<"\t"<< fixed << setprecision(2)<< (double) promedio<<"    |\n";
+                if(zona>notaMayor)
+                {
+                    notaMayor=zona;//95% de exito
+                    alumnoMayor= y;
+                }
+
+            }
+            imprimirLineaMatriz();
+
+        }
+    int y = alumnoMayor;
+    cout << "El mejor alumno de la Facultad es " << alumnos[y] << " con "<< notaMayor << endl;
+
+    if(notaMayor>mejorFac)
+    {
+        mejorFac = notaMayor;//95% de exito
+        mejorFacNum = f;
+    }
+    if(alumnoMayor>mejorAlumFac)
+    {
+        mejorAlumFac = alumnoMayor;
+        mejorAlumFacNum = y;
+    }
+    }
+
+
+    //Colocar promedio y competencias de las facultades...
+    int f = mejorFacNum;    //Mejor facultad
+    int j = mejorAlumFacNum;   //Mejor alumno 3 facultades
+    promedioGenFac= promedioGenFac/30;          //Promedio general
+
+    cout << "\nLa mejor facultad es: " << facultades[f] << endl;
+    cout << "El mejor alumno por las 3 facultades: " << alumnos[j]<< endl;
+    cout << "Promedio general de las 3 facultades: " << promedioGenFac << endl;
+
+    system ("pause > nul");
+}
+
  void imprimirLineaMatriz()
  {
      cout <<"+--------------------------------------------";
@@ -418,35 +599,11 @@ void promedioFacultades()
     float matriz2 [NUMERO_ALUMNOS][SPARCIAL+1];
     float matriz3 [NUMERO_ALUMNOS][SPARCIAL+1];
     float matriz4[NUMERO_ALUMNOS][RECUPERA+1];
-    float mejorFac=0;
-    float mejorFacNum=0;
-    float notaMayor;
-    int alumnoMayor, y;
-    char facultades[NUMERO_FACULTADES][MAX_LONGITUD_CADENA] = {"Facultad de Ingenieria","Facultad de Arquitectura","Facultad de Medicina"};
+
     char alumnos[NUMERO_ALUMNOS][MAX_LONGITUD_CADENA] = {"Juan","Pedro","Kathy","Sandra","Diego","Melany","Oswaldo","Daniela","Francisco","Xavier"};
 
 
-    for (int f = 0; f < NUMERO_FACULTADES; f++)
-    {
-        cout << "\n\nNotas para la " << facultades[f] << endl;
-        llenarMatriz(matriz);
-        llenarMatriz1(matriz1);
-        llenarMatriz2(matriz2);
-        llenarMatriz2(matriz3);
-        llenarMatriz4(matriz4);
-        imprimirMatriz(matriz,matriz1,matriz2,matriz3,matriz4, alumnos);
-        if(notaMayor>mejorFac)
-        {
-            mejorFac=notaMayor;//95% de exito
-            mejorFacNum = f;
-        }
-    }
-    //Colocar promedio y competencias de las facultades...
-    int f = mejorFacNum;
-
-    cout << "\nLa mejor facultad es: " << facultades[f] << endl;
-    cout << "El mejor alumno por las 3 facultades: " << endl;
-    cout << "Promedio general de las 3 facultades: " << endl;
+    imprimirMatriz2(matriz,matriz1,matriz2,matriz3,matriz4, alumnos);
 
     system ("pause > nul");
 }
