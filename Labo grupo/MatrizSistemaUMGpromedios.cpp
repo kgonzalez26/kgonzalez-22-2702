@@ -45,7 +45,7 @@ void imprimirMatriz2 (float matriz [NUMERO_ALUMNOS][PPARCIAL+1] , float matriz1 
 void promedioFacultades();
 void promedioComparacion();
 
-//Menú principal una función nueva que te permita ingresar las notas de las 2 facultades
+//MenÃº principal una funciÃ³n nueva que te permita ingresar las notas de las 2 facultades
 void menuPrincipal();
 void seleccionFacultad();
 void ingresoNotas();
@@ -557,7 +557,7 @@ void llenarMatriz4(float matriz4[NUMERO_ALUMNOS][RECUPERA+1]) //llenado de matri
     if(alumnoMayor>mejorAlumFac)
     {
         mejorAlumFac = alumnoMayor;
-        mejorAlumFacNum = y;
+        mejorAlumFacNum = f;
     }
     }
 
