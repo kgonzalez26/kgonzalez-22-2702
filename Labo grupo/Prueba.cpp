@@ -1,5 +1,3 @@
-//Este ejemplo pretende mostrar el sistema de notas de la Universidad Mariano Galvez a traves de matrices en lenguaje C++
-
 #include <iostream>
 #include <iomanip>
 #include <string.h>
@@ -272,7 +270,8 @@ void llenarMatriz4(float matriz4[NUMERO_ALUMNOS][RECUPERA+1]) //llenado de matri
     char alumnoPromedioMayor [MAX_LONGITUD_CADENA]; //vector
     char alumnoPromedioMenor [MAX_LONGITUD_CADENA]; //vector
 
-
+    memcpy(alumnoPromedioMayor, alumnos[0], MAX_LONGITUD_CADENA);
+    memcpy(alumnoPromedioMenor, alumnos[0], MAX_LONGITUD_CADENA);
     imprimirLineaMatriz();
     cout <<"|  Alumno  |";
     for (int x=0; x < NOTA; x++)
@@ -556,7 +555,7 @@ void llenarMatriz4(float matriz4[NUMERO_ALUMNOS][RECUPERA+1]) //llenado de matri
     if(alumnoMayor>mejorAlumFac)
     {
         mejorAlumFac = alumnoMayor;
-        mejorAlumFacNum = f;
+        mejorAlumFacNum = y;
     }
     }
 
@@ -606,4 +605,3 @@ void promedioFacultades()
 
     system ("pause > nul");
 }
-
