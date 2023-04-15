@@ -1,7 +1,7 @@
 #include "Juego.h"
-#include "Jugador.h"
 #include "Config.h"
 #include "Tablero.h"
+#include "persona.h"
 #include <fstream>
 #include <unistd.h>
 
@@ -74,18 +74,29 @@ int Juego::aleatorio_en_rango(int minimo, int maximo)
 
 	void Juego::iniciar()
 	{
+        system("cls");// Limpia la pantalla
 		int fila, columna;
-
+		string id,name,fecha;
+		int tiempo;
+		int score = 0;
+		char r;
+        persona estudiante(id,name,fecha, tiempo, score);
+        estudiante.buscar1();
+        time_t tiempoInicio = time(NULL);
 		while (true)
 		{
-			system("cls");// Limpia la pantalla
-			cout << "VIDAS: " << vidasTablero << endl;//Imprime las vidas restantes del jugador en pantalla
+			cout << "\nSCORE: " << score << "     VIDAS: " << vidasTablero << endl;//Imprime el score y las vidas restantes del jugador en pantalla
 			this->tablero.imprimir();
 			fila = this->solicitarFilaUsuario();
 			columna = this->solicitarColumnaUsuario();
 			bool respuestaAUsuario = this->tablero.descubrirMina(columna, fila);
+			if (respuestaAUsuario)
+			{
+			    score += 5;//Suma 5 puntos al score con un acierto
+			}
 			if (!respuestaAUsuario)
 			{
+			    score -= 5;//Resta 5 puntos al score al detectar una mina
 			    vidasTablero--;//Reduce en 1 las vidas ddel jugador
 			}
 			if (vidasTablero == 0)//Si las vidas llegan a 0, el jugador pierde el juego
@@ -96,6 +107,18 @@ int Juego::aleatorio_en_rango(int minimo, int maximo)
                 cout << "\nTe mostramos donde estaban las minas\n";
 				this->tablero.setModoDesarrollador(true);
 				this->tablero.imprimir();
+				time_t tiempoFin = time(NULL);
+                int tiempoTranscurrido = difftime(tiempoFin, tiempoInicio);
+                cout << "\nTIEMPO OBTENIDO: " << tiempoTranscurrido << " segundos\n" << endl;
+                cout << "\nPUNTUACION FINAL: " << score << " puntos\n" << endl;
+                cout<<"\n\n ¿Desea guardar su record?(Y,N): ";
+                cin>>r;
+                if (r=='y'||r=='Y')
+                {
+                    string id,name,fecha;
+                    persona estudiante(id,name,fecha, tiempoTranscurrido, score);
+                    estudiante.nuevaPartida();
+                }
 				break;
 			}
 
@@ -105,6 +128,13 @@ int Juego::aleatorio_en_rango(int minimo, int maximo)
 				cout << "Ganaste el Juego\n";
 				this->tablero.setModoDesarrollador(true);
 				this->tablero.imprimir();
+				cout << "\nPUNTUACION FINAL: " << score << " puntos\n" << endl;
+                cout<<"\n\n ¿Desea guardar su record?(Y,N): ";
+                cin>>r;
+                if (r=='y'||r=='Y')
+                {
+                    estudiante.nuevaPartida();
+                }
 				break;
 			}
 		}

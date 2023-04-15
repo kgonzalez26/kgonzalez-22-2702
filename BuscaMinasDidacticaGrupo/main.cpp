@@ -3,7 +3,6 @@
 #include <ctime>
 #include "Juego.h"
 #include "Config.h"
-#include "Jugador.h"
 #include "persona.h"
 
 using namespace std;
@@ -39,7 +38,8 @@ int main()
         cout << "\t\t1. Ingreso de Registro de Jugador" << endl;
         cout << "\t\t2. Configuracion del Juego" << endl;
         cout << "\t\t3. Iniciar el juego" << endl;
-        cout << "\t\t4. Salir del Menu" << endl;
+        cout << "\t\t4. Scores Guardados" << endl;
+        cout << "\t\t5. Salir del Menu" << endl;
         cout << "\n\t\tIngrese una opcion: ";
 
         // Lee la selección del usuario5
@@ -51,7 +51,8 @@ int main()
         case 1:
             {
                 string id,name,fecha;
-                persona estudiante(id,name,fecha);
+                int tiempo, score;
+                persona estudiante(id,name,fecha, tiempo, score);
                 estudiante.menu();
                 break;
             }
@@ -67,25 +68,30 @@ int main()
                 cout << "CARGANDO NUEVO TABLERO..." << endl;
                 sleep(2);
                 system("cls");
-
                 // Crea un objeto Juego con el tablero, el número de minas y el número de vidas especificados en la configuración del juego
                 Juego juegoTemporal(Tablero(configuracionJuego.getfilasTablero(), configuracionJuego.getcolumnasTablero(), configuracionJuego.getmodoDesarrolladorTablero()), configuracionJuego.getminasTablero(), configuracionJuego.getvidasTablero());
 
                 //Jugador jugadorActivo(configuracionJuego.getvidasTablero());
                 //jugadorActivo.obtenerVida();
 
-                time_t tiempoInicio = time(NULL);
+
                 // Inicia el juego
                 juegoTemporal.iniciar();
-                time_t tiempoFin = time(NULL);
-                int tiempoTranscurrido = difftime(tiempoFin, tiempoInicio);
-                cout << "\nTIEMPO OBTENIDO: " << tiempoTranscurrido << " segundos\n" << endl;
+
 
                 // Pausa la ejecución del programa para que el usuario pueda ver los resultados
                 system("pause");
                 break;
             }
         case 4:
+            {
+                string id,name,fecha;
+                int tiempo, score;
+                persona estudiante(id,name,fecha, tiempo, score);
+                estudiante.menu1();
+                break;
+            }
+        case 5:
             repetir = false;
             break;
         }
@@ -95,4 +101,5 @@ int main()
     // Indica que el programa se ha ejecutado correctamente
     return 0;
 }
+
 
