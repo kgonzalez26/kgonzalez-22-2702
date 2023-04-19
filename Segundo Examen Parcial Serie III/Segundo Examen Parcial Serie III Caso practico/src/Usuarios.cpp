@@ -290,8 +290,8 @@ bool Usuarios::verificarUsuario() {
 // Declaración de variables locales
 string usuario, contrasena;  // Almacenan el usuario y la contraseña ingresados
 //Establece a traves constantes al administrador y su contraseña
-string administrador = "Kevin";
-string contrasenaAdministrador = "1234";
+string administrador = "Kevin";//Usuario administrador
+string contrasenaAdministrador = "1234";//Contraseña administrador
 int contador = 0;  // Contador de intentos
 bool encontrado = false;  // Indica si se encontró el usuario y la contraseña correctos
 
