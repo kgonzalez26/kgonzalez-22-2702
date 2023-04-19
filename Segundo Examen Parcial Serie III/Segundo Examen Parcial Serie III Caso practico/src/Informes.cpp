@@ -32,7 +32,7 @@ void menuInforme()
 
         break;
     case 2:
-        imprimirInforme();
+        //imprimirInforme();
         break;
     case 3:
         salir = true;

@@ -47,7 +47,7 @@ int main() {
         ingreso.menuUsuarios();
         break;
     case 2:
-        reservacion.menu();
+        //reservacion.menu();
         break;
     case 3:
         //informe.menuInforme();
