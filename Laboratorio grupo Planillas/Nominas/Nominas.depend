@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1681768214 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\laboratorio grupo planillas\planilla registro info personal\nominas\main.cpp
+	<iostream>
+	<conio.h>
+	<cstdlib>
+	<vector>
+	"Datos.h"
+
+1681768170 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\laboratorio grupo planillas\planilla registro info personal\nominas\include\datos.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1681768204 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\laboratorio grupo planillas\planilla registro info personal\nominas\src\datos.cpp
+	"Datos.h"
+
+1681773267 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\laboratorio grupo planillas\nominas\main.cpp
+	<iostream>
+	<conio.h>
+	<cstdlib>
+	<vector>
+	"datos.h"
+
+1681773307 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\laboratorio grupo planillas\nominas\include\datos.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1681778921 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\laboratorio grupo planillas\nominas\src\datos.cpp
+	"datos.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+

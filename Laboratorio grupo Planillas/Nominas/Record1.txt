@@ -1,0 +1,24 @@
+Id Persona: 9
+|      Datos del trabajador      |           Percepciones Empleados          |           Deducciones Empleados           |
+| Nombre:          asd qwe|    Sueldo:                           Q 3400|   ISR:                           Q 212|   
+| Genero:          Mascu|      Bonificaciones:                   Q 250|    IGGS:                          Q 127.2|   
+| DPI:             1235|         Comisiones:                       Q 123|    IRTRA:                         Q 75|       
+| Telefono 1:      6546|         Percepciones Extraordinarias:     Q 42|    Prestamos:                     Q 0|      
+| Telefono 2:      3456|         Horas Extra:                      Q 425|     |                                          
+| Cuenta Bancaria: 2352|         Total Percepciones:               Q 4240|   Total Deducciones:             Q 414.2|      
+| |                                                                                                                       
+| TOTAL SUELDO LIQUIDO Q 3825.8|                                                                                            
+| |                                                                                                                       
+| Fecha de emision: 14/5|                                                                                                 
+Id Persona: 9
+|      Datos del trabajador      |           Percepciones Empleados          |           Deducciones Empleados           |
+| Nombre:          asd qwe   | Sueldo:                           Q 3400  | ISR:                           Q 212   |
+| Genero:          Mascu     | Bonificaciones:                   Q 250   | IGGS:                          Q 127.2   |
+| DPI:             1235        | Comisiones:                       Q 123   | IRTRA:                         Q 75       |
+| Telefono 1:      6546        | Percepciones Extraordinarias:     Q 42   | Prestamos:                     Q 0      |
+| Telefono 2:      3456        | Horas Extra:                      Q 425    |                                           |
+| Cuenta Bancaria: 2352        | Total Percepciones:               Q 4240  | Total Deducciones:             Q 414.2      |
+|                                                                                                                        |
+| TOTAL SUELDO LIQUIDO Q 3825.8                                                                                            |
+|                                                                                                                        |
+| Fecha de emision: 14/5                                                                                                 |
