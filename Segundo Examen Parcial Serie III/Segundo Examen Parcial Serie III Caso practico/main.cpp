@@ -14,10 +14,10 @@ int main() {
 
     //string
     int idReservacion;
-    string cliente;
+    string idcliente;
     int habitacion, cantidadHabitaciones;
     string fechaInicio, fechaFin;
-    Catalogos reservacion(int idReservacion, string cliente, int habitacion, int cantidadHabitaciones, string fechaInicio, string fechaFin);
+    Catalogos reservacion(int idReservacion, string idcliente, int habitacion, int cantidadHabitaciones, string fechaInicio, string fechaFin);
 
     //if (usuarioCorrecto) {
     int choice;

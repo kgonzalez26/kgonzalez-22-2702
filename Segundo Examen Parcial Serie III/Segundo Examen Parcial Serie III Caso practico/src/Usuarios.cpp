@@ -47,7 +47,7 @@ void Usuarios::menuUsuarios(){
 	cout<<"\t\t\t 5. Exit"<<endl; // Se imprime la opción para salir
 
 	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5/6]"<<endl; // Se imprime una línea indicando que se debe elegir una opción
+	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5]"<<endl; // Se imprime una línea indicando que se debe elegir una opción
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"Ingresa tu Opcion: ";
     cin>>choice; // Se lee la opción elegida por el usuario

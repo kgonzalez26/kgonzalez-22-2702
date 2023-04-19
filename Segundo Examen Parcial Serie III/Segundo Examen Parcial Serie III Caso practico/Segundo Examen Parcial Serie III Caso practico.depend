@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1681922519 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\src\catalogos.cpp
+1681924627 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\src\catalogos.cpp
 	"Catalogos.h"
 
-1681923302 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\include\catalogos.h
+1681924731 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\include\catalogos.h
 	<iostream>
 	<fstream>
 	<string>
 
-1681922945 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\src\usuarios.cpp
+1681923571 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\src\usuarios.cpp
 	"Usuarios.h"
 	<iostream>
 	<fstream>
@@ -21,7 +21,7 @@
 	<fstream>
 	<string>
 
-1681923310 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\main.cpp
+1681923766 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\main.cpp
 	<iostream>
 	<fstream>
 	<string>
