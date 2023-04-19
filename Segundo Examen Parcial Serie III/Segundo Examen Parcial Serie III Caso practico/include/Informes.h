@@ -14,6 +14,8 @@ class Informes
 
         void imprimirInforme();
 
+        void menuInforme();
+
     protected:
 
     private:

@@ -5,6 +5,42 @@ Informes::Informes()
     //ctor
 }
 
+void menuInforme()
+{
+    bool salir = false;
+    int opcion;
+	do
+    {
+	system("cls");
+
+    cout <<"\t\t\t----------------------------------"<<endl;
+    cout <<"\t\t\t|         MENU CATALOGOS         |"<<endl;
+    cout <<"\t\t\t----------------------------------"<<endl;
+	cout<<"\t\t\t 1. Buscar"<<endl;
+	cout<<"\t\t\t 2. Consultar"<<endl;
+    cout<<"\t\t\t 3. Salir"<<endl;
+
+	cout<<"\t\t\t-------------------------------"<<endl;
+	cout<<"\t\t\tOpcion a escoger:[1/2/3]"<<endl;
+	cout<<"\t\t\t-------------------------------"<<endl;
+	cout<<"Ingresa tu Opcion: ";
+    cin>>opcion;
+
+    switch(opcion)
+    {
+    case 1:
+
+        break;
+    case 2:
+        imprimirInforme();
+        break;
+    case 3:
+        salir = true;
+        break;
+    }
+    }while(opcion!= 3);
+}
+
 void imprimirInforme()
 {
     int idPersona;

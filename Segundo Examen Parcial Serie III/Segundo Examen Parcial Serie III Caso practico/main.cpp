@@ -20,6 +20,8 @@ int main() {
     string fechaInicio, fechaFin;
     Catalogos reservacion(int idReservacion, string idcliente, int habitacion, int cantidadHabitaciones, string fechaInicio, string fechaFin);
 
+
+
     //if (usuarioCorrecto) {
     int opcion;
 	char x;
@@ -45,10 +47,10 @@ int main() {
         ingreso.menuUsuarios();
         break;
     case 2:
-        //catalogos.menu();
+        reservacion.menu();
         break;
     case 3:
-        //informe.menu();
+        //informe.menuInforme();
         break;
     case 4:
         exit(0);
