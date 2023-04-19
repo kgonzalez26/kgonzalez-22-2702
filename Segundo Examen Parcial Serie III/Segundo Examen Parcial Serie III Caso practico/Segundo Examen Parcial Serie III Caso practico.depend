@@ -21,10 +21,16 @@
 	<fstream>
 	<string>
 
-1681925213 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\main.cpp
+1681925705 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\main.cpp
 	<iostream>
 	<fstream>
 	<string>
 	"Usuarios.h"
 	"Catalogos.h"
+	"Informes.h"
+
+1681926344 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\include\informes.h
+	<iostream>
+	<fstream>
+	<string>
 
