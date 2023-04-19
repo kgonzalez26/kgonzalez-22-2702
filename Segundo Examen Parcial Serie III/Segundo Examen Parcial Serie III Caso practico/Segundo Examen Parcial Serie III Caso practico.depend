@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1681921098 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\src\catalogos.cpp
+	"Catalogos.h"
+
+1681922514 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\include\catalogos.h
+
+1681922161 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\src\usuarios.cpp
+	"Usuarios.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1681921211 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\include\usuarios.h
+	<iostream>
+	<fstream>
+	<string>
+
+1681922490 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\segundo examen parcial serie iii\segundo examen parcial serie iii caso practico\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"Usuarios.h"
+	"Catalogos.h"
+
