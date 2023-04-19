@@ -13,8 +13,11 @@ int main() {
     bool usuarioCorrecto = ingreso.verificarUsuario();
 
     //string
-    //Catalogo reservacion();
-
+    int idReservacion;
+    string cliente;
+    int habitacion, cantidadHabitaciones;
+    string fechaInicio, fechaFin;
+    Catalogos reservacion(int idReservacion, string cliente, int habitacion, int cantidadHabitaciones, string fechaInicio, string fechaFin);
 
     //if (usuarioCorrecto) {
     int choice;
