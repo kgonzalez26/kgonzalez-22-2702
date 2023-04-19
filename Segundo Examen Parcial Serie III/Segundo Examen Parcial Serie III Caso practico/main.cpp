@@ -3,6 +3,7 @@
 #include <string>
 #include "Usuarios.h"
 #include "Catalogos.h"
+#include "Informes.h"
 
 using namespace std;
 
