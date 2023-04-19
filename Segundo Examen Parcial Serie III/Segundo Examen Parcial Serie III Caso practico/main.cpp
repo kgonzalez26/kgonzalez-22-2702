@@ -20,7 +20,7 @@ int main() {
     Catalogos reservacion(int idReservacion, string idcliente, int habitacion, int cantidadHabitaciones, string fechaInicio, string fechaFin);
 
     //if (usuarioCorrecto) {
-    int choice;
+    int opcion;
 	char x;
 	do
     {
@@ -31,14 +31,15 @@ int main() {
     cout <<"\t\t\t----------------------------------"<<endl;
 	cout<<"\t\t\t 1. Ingreso Al Menu de Usurios"<<endl;
 	cout<<"\t\t\t 2. Ingreso Al Menu de Catalogos"<<endl;
-	cout<<"\t\t\t 3. Exit"<<endl;
+	cout<<"\t\t\t 3. Ingreso Al Menu de Informes"<<endl;
+	cout<<"\t\t\t 4. Exit"<<endl;
 
 	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3]"<<endl;
+	cout<<"\t\t\tOpcion a escoger:[1/2/3/4]"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"Ingresa tu Opcion: ";
-    cin>>choice;
-    switch(choice){
+    cin>>opcion;
+    switch(opcion){
     case 1:
         ingreso.menuUsuarios();
         break;
@@ -46,6 +47,9 @@ int main() {
         //catalogos.menu();
         break;
     case 3:
+        //informe.menu();
+        break;
+    case 4:
         exit(0);
 	default:
 		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
@@ -53,5 +57,5 @@ int main() {
     }
 
 
-    }while(choice!= 3);
+    }while(opcion!= 4);
 }
