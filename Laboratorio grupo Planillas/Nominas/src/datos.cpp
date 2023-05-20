@@ -295,18 +295,41 @@ void datos::insertar()
 void datos::desplegar()
 {
     system("cls");
-    fstream file;
-    string line;
-    cout<<"\n-------------------------Tabla de Detalles de Personas -------------------------"<<endl;
-    file.open("Record1.txt", ios::in);
-    if (file.is_open()) {
-        while (getline(file, line)) {
-            cout << line << endl;
-        }
-        file.close();
-    } else {
-        cout << "No se pudo abrir el archivo" << endl;
-    }
+	fstream file;
+	int total=0;
+	cout<<"\n-------------------------Tabla de Detalles de Personas -------------------------"<<endl;
+	file.open("ParticipantRecord1.txt",ios::in);
+	if(!file)
+	{
+		cout<<"\n\t\t\tNo hay información...";
+		file.close();
+	}
+	else
+	{
+		file >> id>>nombre >>apellido >>genero >>dia >>mes >>dpi >>telefono >>telefono1 >>numCuenta >>sueldo >>bonificacionIncentiva >>comisiones >>percepciones_extra >>horas_extra >>total_percepciones >>isr >>iggs >>irtra >>prestamos >>deducciones_totales >>sueldo_liquido;
+		while(!file.eof())
+		{
+			total++;
+			cout <<"Id Persona: "<<id<<endl;
+            cout << "|" << setw(20) << "      Datos del trabajador      |" << setw(7) << "           Percepciones Empleados          |" << setw(6) << "           Deducciones Empleados           |" << endl;
+            cout << "| " << "Nombre:          " << nombre << " " << apellido << setw(5) << "| " << "Sueldo:                           Q " << sueldo << setw(4) << "| " << "ISR:                           Q " <<isr << setw(4) << "|" << endl;
+            cout << "| " << "Genero:          " << genero << setw(7) << "| " << "Bonificaciones:                   Q " << bonificacionIncentiva << setw(5) << "| " << "IGGS:                          Q " << iggs << setw(4) << "|" << endl;
+            cout << "| " << "DPI:             " << dpi << setw(10) << "| " << "Comisiones:                       Q " << comisiones << setw(5) << "| " << "IRTRA:                         Q " << irtra << setw(8) << "|" << endl;
+            cout << "| " << "Telefono 1:      " << telefono << setw(10) << "| " << "Percepciones Extraordinarias:     Q " << percepciones_extra << setw(5) << "| " << "Prestamos:                     Q " << prestamos << setw(7) << "|" << endl;
+            cout << "| " << "Telefono 2:      " << telefono1 << setw(10) << "| " << "Horas Extra:                      Q " << horas_extra << setw(6) << "| " << setw(43) << "|" << endl;
+            cout << "| " << "Cuenta Bancaria: " << numCuenta << setw(10) << "| " << "Total Percepciones:               Q " << total_percepciones << setw(4) << "| " << "Total Deducciones:             Q " << deducciones_totales << setw(7) << "|" << endl;
+            cout << "| " << setw(120) << "|" << endl;
+            cout << "| " << "TOTAL SUELDO LIQUIDO Q " << sueldo_liquido << setw(93) << "|" << endl;
+            cout << "| " << setw(120) << "|" << endl;
+            cout << "| " << "Fecha de emision: " << dia << "/" << mes << setw(98) << "|" << endl;
+			file >> id>>nombre >>apellido >>genero >>dia >>mes >>dpi >>telefono >>telefono1 >>numCuenta >>sueldo >>bonificacionIncentiva >>comisiones >>percepciones_extra >>horas_extra >>total_percepciones >>isr >>iggs >>irtra >>prestamos >>deducciones_totales >>sueldo_liquido;
+		}
+		if(total==0)
+		{
+			cout<<"\n\t\t\tNo hay informacion...";
+		}
+	}
+	file.close();
 }
 
 void datos::menuEmpleado()
@@ -355,7 +378,10 @@ void datos::menuEmpleado()
 	}
     }while(repetir);
 }
-/*{
+
+
+/*
+{
 	system("cls");
 	fstream file;
 	int total=0;
@@ -536,18 +562,39 @@ void datos::buscar()
 		{
 			if(participant_id==id)
 			{
-            cout <<"Id Persona: "<<id<<endl;
-			cout << "|" << setw(20) << "      Datos del trabajador      |" << setw(7) << "           Percepciones Empleados          |" << setw(6) << "           Deducciones Empleados           |" << endl;
-			cout << "| " << "Nombre:          " << nombre << " " << apellido << setw(5) << "| " << "Sueldo:                           Q " << sueldo << setw(4) << "| " << "ISR:                           Q " << isr << setw(4) << "|" << endl;
-            cout << "| " << "Genero:          " << genero << setw(7) << "| " << "Bonificaciones:                   Q " << bonificacionIncentiva << setw(5) << "| " << "IGGS:                          Q " << iggs << setw(4) << "|" << endl;
-            cout << "| " << "DPI:             " << dpi << setw(10) << "| " << "Comisiones:                       Q " << comisiones << setw(5) << "| " << "IRTRA:                         Q " << irtra << setw(8) << "|" << endl;
-            cout << "| " << "Telefono 1:      " << telefono << setw(10) << "| " << "Percepciones Extraordinarias:     Q " << percepciones_extra << setw(5) << "| " << "Prestamos:                     Q " << prestamos << setw(7) << "|" << endl;
-            cout << "| " << "Telefono 2:      " << telefono1 << setw(10) << "| " << "Horas Extra:                      Q " << horas_extra << setw(6) << "| " << setw(43) << "|" << endl;
-            cout << "| " << "Cuenta Bancaria: " << numCuenta << setw(10) << "| " << "Total Percepciones:               Q " << total_percepciones << setw(4) << "| " << "Total Deducciones:             Q " << deducciones_totales << setw(7) << "|" << endl;
-            cout << "| " << setw(120) << "|" << endl;
-            cout << "| " << "TOTAL SUELDO LIQUIDO Q " << sueldo_liquido << setw(93) << "|" << endl;
-            cout << "| " << setw(120) << "|" << endl;
-            cout << "| " << "Fecha de emision: " << dia << "/" << mes << setw(98) << "|" << endl;
+                cout <<"\n\n\t\t\t Id Persona: "<<id<<endl;
+                cout << "|" << setw(20) << "         Datos del trabajador         |" << setw(7) << "         Percepciones Empleados          |" << setw(6) << "       Deducciones Empleados       |" << endl;
+                cout << "| " << "Nombre:          " << setw(12) << left << nombre << " " << apellido
+                     << "| " << "Sueldo:                        Q " << setw(7) << right << sueldo
+                     << "| " << "ISR:                     Q " << setw(7) << right << isr
+                     << setw(1) << right << "|" << endl;
+                cout << "| " << "Genero:          " << setw(12) << left << genero << setw(10) << right
+                     << "| " << "Bonificaciones:                Q " << setw(7) << right << bonificacionIncentiva
+                     << "| " << "IGGS:                    Q " << setw(7) << right << iggs
+                     << setw(1) << right << "|" << endl;
+                cout << "| " << "DPI:             " << setw(12) << left << dpi << setw(10) << right
+                     << "| " << "Comisiones:                    Q " << setw(7) << right << comisiones
+                     << "| " << "IRTRA:                   Q " << setw(7) << right << irtra
+                     << setw(1) << right << "|" << endl;
+                cout << "| " << "Telefono 1:      " << setw(12) << left << telefono << setw(10) << right
+                     << "| " << "Percepciones Extraordinarias:  Q " << setw(7) << right << percepciones_extra
+                     << "| " << "Prestamos:               Q " << setw(7) << right << prestamos
+                     << setw(1) << right << "|" << endl;
+                cout << "| " << "Telefono 2:      " << setw(12) << left << telefono1 << setw(10) << right
+                     << "| " << "Horas Extra:                   Q " << setw(7) << right << horas_extra
+                     << setw(1) << right << "|" << endl;
+                cout << "| " << "Cuenta Bancaria: " << setw(12) << left << numCuenta << setw(10) << right
+                     << "| " << "Total Percepciones:            Q " << setw(7) << right << total_percepciones
+                     << "| " << "Total Deducciones:       Q " << setw(7) << right << deducciones_totales
+                     << setw(1) << right << "|" << endl;
+                cout << "| " << setw(116) << right
+                     << "|" << endl;
+                cout << "| " << "TOTAL SUELDO LIQUIDO Q " << setw(92) << left << sueldo_liquido
+                     << "|" << endl;
+                cout << "| " << setw(116) << right
+                     << "|" << endl;
+                cout << "| " << "Fecha de emision: " << dia << "/" << setw(94) << left << mes
+                     << "|" << endl;
 				found++;
 			}
 			file >> id>>nombre >>apellido >>genero >>dia >>mes >>dpi >>telefono >>telefono1 >>numCuenta >>sueldo >>bonificacionIncentiva >>comisiones >>percepciones_extra >>horas_extra >>total_percepciones >>isr >>iggs >>irtra >>prestamos >>deducciones_totales >>sueldo_liquido;
@@ -631,7 +678,7 @@ void datos::horasExtraEmpleado()
 	else
 	{
         cout<<"\t\t\tIngresa Id Persona         : ";
-        cin>>id
+        cin>>id;
         cout << "\t\t\tHoras Extra: ";
         cin >> horasExtras;
 

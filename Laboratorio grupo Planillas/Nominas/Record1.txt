@@ -22,3 +22,15 @@ Id Persona: 9
 | TOTAL SUELDO LIQUIDO Q 3825.8                                                                                            |
 |                                                                                                                        |
 | Fecha de emision: 14/5                                                                                                 |
+Id Persona: 6
+|      Datos del trabajador      |           Percepciones Empleados          |           Deducciones Empleados           |
+| Nombre:          Carlos Bonilla|    Sueldo:                           Q 5000|   ISR:                           Q 316.75|   
+| Genero:          Masculino|      Bonificaciones:                   Q 250|    IGGS:                          Q 190.05|   
+| DPI:             123346568|         Comisiones:                       Q 340|    IRTRA:                         Q 75|       
+| Telefono 1:      12345366|         Percepciones Extraordinarias:     Q 120|    Prestamos:                     Q 400|      
+| Telefono 2:      65874574|         Horas Extra:                      Q 625|     |                                          
+| Cuenta Bancaria: 23476|         Total Percepciones:               Q 6335|   Total Deducciones:             Q 981.8|      
+| |                                                                                                                       
+| TOTAL SUELDO LIQUIDO Q 5353.2|                                                                                            
+| |                                                                                                                       
+| Fecha de emision: 19/5|                                                                                                 

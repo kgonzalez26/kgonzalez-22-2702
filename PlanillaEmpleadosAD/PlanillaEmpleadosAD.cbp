@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Segundo Examen Parcial Serie III Caso practico" />
+		<Option title="PlanillaEmpleadosAD" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Segundo Examen Parcial Serie III Caso practico" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/PlanillaEmpleadosAD" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -17,7 +17,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Segundo Examen Parcial Serie III Caso practico" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/PlanillaEmpleadosAD" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -34,13 +34,19 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Catalogos.h" />
-		<Unit filename="include/Informes.h" />
+		<Unit filename="include/DatosEmpleado.h" />
+		<Unit filename="include/GuardarEmpleados.h" />
+		<Unit filename="include/Planilla.h" />
 		<Unit filename="include/Usuarios.h" />
+		<Unit filename="include/bitacora.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Catalogos.cpp" />
-		<Unit filename="src/Informes.cpp" />
+		<Unit filename="src/DatosEmpleado.cpp" />
+		<Unit filename="src/GuardarEmpleados.cpp" />
+		<Unit filename="src/Planilla.cpp" />
 		<Unit filename="src/Usuarios.cpp" />
-		<Extensions />
+		<Unit filename="src/bitacora.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

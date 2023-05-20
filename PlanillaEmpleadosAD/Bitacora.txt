@@ -1,0 +1,108 @@
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 19/5/2023
+
+			Hora en que entro al programa: 18:11:39
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 19/5/2023
+
+			Hora en que entro al programa: 18:11:59
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 19/5/2023
+
+			Hora en que entro al programa: 18:12:23
+
+			Accion: Ingreso Datos del Empleado - 7001
+
+			Accion: Ingreso Percepciones - 7002
+
+			Accion: Ingreso Todos los Datos - 7005
+
+			Accion: Busco a un Empleado - 7008
+
+			Accion: Busco a un Empleado - 7008
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 19/5/2023
+
+			Hora en que entro al programa: 18:19:28
+
+			Accion: Busco a un Empleado - 7008
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 19/5/2023
+
+			Hora en que entro al programa: 18:31:41
+
+			Accion: Ingreso Datos del Empleado - 7001
+
+			Accion: Ingreso Percepciones - 7002
+
+			Accion: Ingreso Horas Extras - 7003
+
+			Accion: Ingreso Deducciones - 7004
+
+			Accion: Ingreso Todos los Datos - 7005
+
+			Accion: Busco a un Empleado - 7008
+
+			Accion: Busco a un Empleado - 7008
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 19/5/2023
+
+			Hora en que entro al programa: 18:34:36
+
+			Accion: Busco a un Empleado - 7008
+
+			Hora en que salio del programa: 18:34:36
+
