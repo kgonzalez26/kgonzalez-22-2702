@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1684541959 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\proyecto grupo\planillaempleadosgrupo\planillaempleadosad\src\datosempleado.cpp
+1684631326 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\proyecto grupo\planillaempleadosgrupo\planillaempleadosad\src\datosempleado.cpp
 	"DatosEmpleado.h"
 	"GuardarEmpleados.h"
 	"IngresarDatosEmpleado.h"
@@ -92,6 +92,94 @@
 	<iomanip>
 
 1684525557 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\proyecto grupo\planillaempleadosgrupo\planillaempleadosad\include\ingresardatosempleado.h
+	<iostream>
+	<fstream>
+	<string>
+
+1684464055 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\planillaempleadosad\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"Usuarios.h"
+	"Planilla.h"
+	"bitacora.h"
+
+1684461745 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\planillaempleadosad\include\usuarios.h
+	<iostream>
+	<fstream>
+	<string>
+
+1684464043 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\planillaempleadosad\include\planilla.h
+
+1684461853 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\planillaempleadosad\include\bitacora.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1684461853 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\planillaempleadosad\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1684542607 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\planillaempleadosad\src\ingresardatosempleado.cpp
+	"IngresarDatosEmpleado.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1684525557 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\planillaempleadosad\include\ingresardatosempleado.h
+	<iostream>
+	<fstream>
+	<string>
+
+1684467117 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\planillaempleadosad\src\planilla.cpp
+	"Planilla.h"
+	"Usuarios.h"
+	"bitacora.h"
+	"DatosEmpleado.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1684524764 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\planillaempleadosad\include\datosempleado.h
+	<iostream>
+	<fstream>
+	<string>
+
+1684461745 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\planillaempleadosad\src\usuarios.cpp
+	"Usuarios.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1684631546 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\planillaempleadosad\src\datosempleado.cpp
+	"DatosEmpleado.h"
+	"GuardarEmpleados.h"
+	"IngresarDatosEmpleado.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1684468072 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\planillaempleadosad\include\guardarempleados.h
 	<iostream>
 	<fstream>
 	<string>

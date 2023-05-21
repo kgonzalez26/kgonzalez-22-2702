@@ -272,7 +272,7 @@ void DatosEmpleado::menuProcesosEmpleado()
     switch(choice)
     {
     case 1:
-		//modificar();
+		modificar();
 		file2<<"\t\t\tAccion: Modifico Datos del Empleado - " <<accion6<<"\n"<<endl;
 		break;
 	case 2:
@@ -280,7 +280,7 @@ void DatosEmpleado::menuProcesosEmpleado()
 		file2<<"\t\t\tAccion: Busco a un Empleado - " <<accion7<<"\n"<<endl;
 		break;
 	case 3:
-		//borrar();
+		borrar();
 		file2<<"\t\t\tAccion: Borro a un Empleado -  "<<accion8<<endl;
 		file2<<"\t\t\tId Empleado Borrado: " <<id<<"\n"<<endl;
 		break;
@@ -327,7 +327,13 @@ void DatosEmpleado::modificar()
         while(file >> id >> nombre >> apellido >> genero >> dia >> mes >> dpi >> telefono >> telefono1 >> numCuenta >> sueldo >> bonificacionIncentiva >> comisiones >> percepciones_extra >> horas_extra >> total_percepciones >> isr >> iggs >> irtra >> prestamos >> deducciones_totales >> sueldo_liquido) {
 			if(participant_id!=id)
 			{
-                file <<"\n\n\t\t\t Id Persona: "<<id<<endl;
+                    file<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< apellido <<std::left<<std::setw(15)<< genero <<std::left<<std::setw(15)<< puesto  <<std::left<<std::setw(15)<< departamento <<std::left<<std::setw(15)<< dia <<std::left<<std::setw(15)<< mes <<std::left<<std::setw(15)<< dpi <<std::left<<std::setw(15)<< telefono
+                        <<std::left<<std::setw(15)<< telefono1 <<std::left<<std::setw(15)<< numCuenta <<std::left<<std::setw(15)<< sueldo <<std::left<<std::setw(15)<< bonificacionIncentiva <<std::left<<std::setw(15)<< comisiones <<std::left<<std::setw(15)<< percepciones_extra <<std::left<<std::setw(15)<< horas_extra
+                        <<std::left<<std::setw(15)<< total_percepciones <<std::left<<std::setw(15)<< isr <<std::left<<std::setw(15)<< iggs <<std::left<<std::setw(15)<< irtra <<std::left<<std::setw(15)<< prestamos <<std::left<<std::setw(15)<< deducciones_totales <<std::left<<std::setw(15)<< sueldo_liquido << "\n";
+
+                file.close();
+
+                /*file <<"\n\n\t\t\t Id Persona: "<<id<<endl;
                 file << "|" << setw(20) << "         Datos del trabajador         |" << setw(7) << "           Percepciones Empleados          |" << setw(6) << "           Deducciones Empleados           |" << endl;
                 file << "| " << "Nombre:          " << nombre << " " << apellido << setw(10);
                 file << "|" << endl;
@@ -363,7 +369,7 @@ void DatosEmpleado::modificar()
                 file << "| " << setw(120);
                 file << "|" << endl;
                 file << "| " << "Fecha de emision: " << dia << "/" << mes << setw(98);
-                file << "|" << endl;
+                file << "|" << endl;*/
 			}
 			else{
                 int num_empleados;
@@ -424,7 +430,14 @@ void DatosEmpleado::modificar()
 
               sueldo_liquido = total_percepciones - deducciones_totales;
 
-                file <<"\n\n\t\t\t Id Persona: "<<id<<endl;
+
+                file<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< apellido <<std::left<<std::setw(15)<< genero <<std::left<<std::setw(15)<< puesto  <<std::left<<std::setw(15)<< departamento <<std::left<<std::setw(15)<< dia <<std::left<<std::setw(15)<< mes <<std::left<<std::setw(15)<< dpi <<std::left<<std::setw(15)<< telefono
+                    <<std::left<<std::setw(15)<< telefono1 <<std::left<<std::setw(15)<< numCuenta <<std::left<<std::setw(15)<< sueldo <<std::left<<std::setw(15)<< bonificacionIncentiva <<std::left<<std::setw(15)<< comisiones <<std::left<<std::setw(15)<< percepciones_extra <<std::left<<std::setw(15)<< horas_extra
+                    <<std::left<<std::setw(15)<< total_percepciones <<std::left<<std::setw(15)<< isr <<std::left<<std::setw(15)<< iggs <<std::left<<std::setw(15)<< irtra <<std::left<<std::setw(15)<< prestamos <<std::left<<std::setw(15)<< deducciones_totales <<std::left<<std::setw(15)<< sueldo_liquido << "\n";
+
+            file.close();
+
+                /*file <<"\n\n\t\t\t Id Persona: "<<id<<endl;
                 file << "|" << setw(20) << "         Datos del trabajador         |" << setw(7) << "           Percepciones Empleados          |" << setw(6) << "           Deducciones Empleados           |" << endl;
                 file << "| " << "Nombre:          " << nombre << " " << apellido << setw(10);
                 file << "|" << endl;
@@ -460,9 +473,9 @@ void DatosEmpleado::modificar()
                 file << "| " << setw(120);
                 file << "|" << endl;
                 file << "| " << "Fecha de emision: " << dia << "/" << mes << setw(98);
-                file << "|" << endl;
+                file << "|" << endl;*/
             }
-		    file1 >> id>>nombre >>apellido >>genero >>dia >>mes >>dpi >>telefono >>telefono1 >>numCuenta >>sueldo >>bonificacionIncentiva >>comisiones >>percepciones_extra >>horas_extra >>total_percepciones >>isr >>iggs >>irtra >>prestamos >>deducciones_totales >>sueldo_liquido;
+		    file1 >> id>>nombre >>apellido >>genero >>puesto >>departamento >>dia >>mes >>dpi >>telefono >>telefono1 >>numCuenta >>sueldo >>bonificacionIncentiva >>comisiones >>percepciones_extra >>horas_extra >>total_percepciones >>isr >>iggs >>irtra >>prestamos >>deducciones_totales >>sueldo_liquido;
 		    }
 		    file1.close();
 		    file.close();
@@ -595,9 +608,9 @@ void DatosEmpleado::borrar()
     bool encontrado = false; //Bandera para indicar si se encontró la ID
 
     while (getline(fileIn, line)) {
-        if (line.find("Id Persona: " + id) != string::npos) { //Si se encuentra la ID
+        if (line.find(id) != string::npos) { //Si se encuentra la ID
             encontrado = true; //Cambiar la bandera a verdadero para indicar que se encontró
-            for (int i = 0; i < 13; i++) { //Saltar 10 líneas (que corresponden a la información del registro)
+            for (int i = 0; i < 1; i++) { //Saltar 10 líneas (que corresponden a la información del registro)
                 getline(fileIn, line);
             }
         }
