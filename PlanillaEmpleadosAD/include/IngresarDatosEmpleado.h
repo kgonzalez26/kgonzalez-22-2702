@@ -10,7 +10,7 @@ using namespace std;
 class IngresarDatosEmpleado
 {
     public:
-        IngresarDatosEmpleado(int id, string nombre, string apellido, string genero, string puesto, string departamento, int dia, int mes, int dpi, int telefono, int telefono1, int numCuenta, float sueldo, float comisiones, float percepciones_extra, float horas_extra, float isr);
+        IngresarDatosEmpleado(int id=0, string nombre="", string apellido="", string genero="", string puesto="", string departamento="", int dia=0, int mes=0, int dpi=0, int telefono=0, int telefono1=0, int numCuenta=0, float sueldo=0, float comisiones=0, float percepciones_extra=0, float horas_extra=0, float isr=0);
 
         string setNombre(string nombre); //Recibe como par�metro una cadena de texto nombre y se utiliza para establecer el valor del atributo privado nombre de la clase. La funci�n devuelve el nuevo valor asignado al atributo.
         string getNombre(); //No recibe par�metros y se utiliza para obtener el valor actual del atributo privado nombre de la clase. La funci�n devuelve una cadena de texto que representa el valor actual del atributo.
@@ -67,17 +67,21 @@ class IngresarDatosEmpleado
         float setPrestamosfloatm(float prestamosfloatm); // Establece el valor del atributo privado 'prestamosfloatm' de la clase
         float getPrestamosfloatm(); // Obtiene el valor del atributo privado 'prestamosfloatm' de la clase
 
-        void menuDatosEmpleado();
-
-        void insertarPercepciones(); // Ingresara las percepciones del empleado
-		void insertarHorasExtras(); //Ingresara las horas extras del empleado
-		void insertarDeducciones(); //Ingresara las deducciones extras del empleado
+        void menuIngresarDatosEmpleado();
 
 		void insertarDatos(); // Ingresara los datos del empleado
 		void insertarDatosPuesto();
 		void insertarDatosDepartamento();
 
+		void menuIngresarProcesos();// Ingresara los procesos del empleado
+
+		void insertarPercepciones(); // Ingresara las percepciones del empleado
+		void insertarHorasExtras(); //Ingresara las horas extras del empleado
+		void insertarDeducciones(); //Ingresara las deducciones extras del empleado
+
+
 		void insertar(); // La funci�n insertar() permite al usuario ingresar informaci�n para crear un nuevo registro y lo guarda en un archivo.
+		void insertar2(); // La funci�n insertar2() permite al usuario ingresar informaci�n para crear un nuevo registro y lo guarda en un archivo.
 
 
     protected:

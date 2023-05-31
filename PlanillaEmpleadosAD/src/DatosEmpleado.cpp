@@ -154,6 +154,7 @@ float DatosEmpleado::getIsr() {
     return this->isr;
 }
 
+
 void DatosEmpleado::menuDatos()
 {
     string nombre, apellido, genero, puesto, departamento;
@@ -175,6 +176,7 @@ void DatosEmpleado::menuDatos()
 
     bool salir = false;
     int choice;
+    int x;
 
     fstream file2;
     file2.open("Bitacora.txt", ios::app | ios::out);
@@ -193,14 +195,10 @@ void DatosEmpleado::menuDatos()
     cout <<"\t\t\t|MENU DE INGRESO DE DATOS DE PLANILLA|"<<endl;
     cout <<"\t\t\t---------------------------------------"<<endl;
 	cout<<"\t\t\t 1. Ingreso de Datos del Empleado"<<endl;
-    cout<<"\t\t\t 2. Ingreso de Percepciones del Empledo"<<endl;
-	cout<<"\t\t\t 3. Ingreso de Horas Extras del Empleado"<<endl;
-	cout<<"\t\t\t 4. Ingreso de Deducciones del Empleado"<<endl;
-	cout<<"\t\t\t 5. Agregar los Datos del Empleado"<<endl;
-	cout<<"\t\t\t 6. Exit"<<endl;
+	cout<<"\t\t\t 2. Exit"<<endl;
 
 	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5/6]"<<endl;
+	cout<<"\t\t\tOpcion a escoger:[1/2]"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"Ingresa tu Opcion: ";
     cin>>choice;
@@ -208,42 +206,50 @@ void DatosEmpleado::menuDatos()
     switch(choice)
     {
     case 1:
-		empleado2.menuDatosEmpleado();
+		empleado2.menuIngresarDatosEmpleado();
 		file2<<"\t\t\tAccion: Ingreso Datos del Empleado - " <<accion0<<"\n"<<endl;
 		break;
-    case 2:
-		empleado2.insertarPercepciones();
-		file2<<"\t\t\tAccion: Ingreso Percepciones - " <<accion1<<"\n"<<endl;
-		break;
-	case 3:
-		empleado2.insertarHorasExtras();
-		file2<<"\t\t\tAccion: Ingreso Horas Extras - " <<accion2<<"\n"<<endl;
-		break;
-	case 4:
-		empleado2.insertarDeducciones();
-		file2<<"\t\t\tAccion: Ingreso Deducciones - " <<accion3<<"\n"<<endl;
-		break;
-    case 5:
-		empleado2.insertar();
-		file2<<"\t\t\tAccion: Ingreso Todos los Datos - " <<accion4<<"\n"<<endl;
-		break;
-	case 6:
-		salir = true;
+	case 2:
+        cout << "Desea salir? Se perderan los datos no guardados (Y/N)" << endl;
+        cin >> x;
+        if (x=='y'||x=='Y'){
+            salir = true;
+        }
+        break;
     default:
         cout<<"\t\t\t\nSaliendo del menu";
 	}
 	getch();
-    }while(choice!= 6);
+    }while(choice!= 2);
     file2.close();
 }
 
 
-
-
 void DatosEmpleado::menuProcesosEmpleado()
 {
+    float sueldo;
+    float bonificacionIncentiva = 250;
+    float comisiones;
+    float percepciones_extra;
+    float horas_extra;
+    float total_percepciones;
+    float isr;
+    float iggs;
+    float irtra = 75;
+    float prestamos;
+    float deducciones_totales;
+    float sueldo_liquido;
+
+
+    IngresarDatosEmpleado empleado2(id, nombre, apellido,genero, puesto, departamento, dia, mes, dpi, telefono, telefono1, numCuenta, sueldo, comisiones, percepciones_extra, horas_extra, isr);
+
     fstream file2;
     file2.open("Bitacora.txt", ios::app | ios::out);
+
+    int accion1 = 7002;
+    int accion2 = 7003;
+    int accion3 = 7004;
+    int accion4 = 7005;
 
     int accion6 = 7007;
     int accion7 = 7008;
@@ -251,14 +257,15 @@ void DatosEmpleado::menuProcesosEmpleado()
 
     bool salir = false;
     int choice;
+    int x;
 	do
     {
 	system("cls");
 
-    cout <<"\t\t\t----------------------------------"<<endl;
-    cout <<"\t\t\t|MENU DE PROCESOS DE PLANILLA|"<<endl;
-    cout <<"\t\t\t----------------------------------"<<endl;
-	cout<<"\t\t\t 1. Modificar Datos Empledo"<<endl;
+    cout <<"\t\t\t------------------------------------"<<endl;
+    cout <<"\t\t\t|   MENU DE PROCESOS DE PLANILLA   |"<<endl;
+    cout <<"\t\t\t------------------------------------"<<endl;
+    cout<<"\t\t\t 1. Ingreso de Procesos del Empledo"<<endl;
 	cout<<"\t\t\t 2. Buscar Datos Empledo"<<endl;
 	cout<<"\t\t\t 3. Borrar Datos Empledo"<<endl;
 	cout<<"\t\t\t 4. Exit"<<endl;
@@ -272,10 +279,10 @@ void DatosEmpleado::menuProcesosEmpleado()
     switch(choice)
     {
     case 1:
-		modificar();
-		file2<<"\t\t\tAccion: Modifico Datos del Empleado - " <<accion6<<"\n"<<endl;
+		empleado2.menuIngresarProcesos();
+		file2<<"\t\t\tAccion: Ingreso Procesos a un Empleado - " <<accion6<<"\n"<<endl;
 		break;
-	case 2:
+    case 2:
 		buscar();
 		file2<<"\t\t\tAccion: Busco a un Empleado - " <<accion7<<"\n"<<endl;
 		break;
@@ -285,7 +292,7 @@ void DatosEmpleado::menuProcesosEmpleado()
 		file2<<"\t\t\tId Empleado Borrado: " <<id<<"\n"<<endl;
 		break;
     case 4:
-		salir = true;
+        salir = true;
     default:
         cout<<"\t\t\t\nSaliendo del menu";
 	}
@@ -293,6 +300,7 @@ void DatosEmpleado::menuProcesosEmpleado()
     }while(choice!= 4);
     file2.close();
 }
+
 void DatosEmpleado::desplegar()
 {
     system("cls");
@@ -332,44 +340,6 @@ void DatosEmpleado::modificar()
                         <<std::left<<std::setw(15)<< total_percepciones <<std::left<<std::setw(15)<< isr <<std::left<<std::setw(15)<< iggs <<std::left<<std::setw(15)<< irtra <<std::left<<std::setw(15)<< prestamos <<std::left<<std::setw(15)<< deducciones_totales <<std::left<<std::setw(15)<< sueldo_liquido << "\n";
 
                 file.close();
-
-                /*file <<"\n\n\t\t\t Id Persona: "<<id<<endl;
-                file << "|" << setw(20) << "         Datos del trabajador         |" << setw(7) << "           Percepciones Empleados          |" << setw(6) << "           Deducciones Empleados           |" << endl;
-                file << "| " << "Nombre:          " << nombre << " " << apellido << setw(10);
-                file << "|" << endl;
-                file << "| " << "Puesto:          " << puesto<< setw(10);
-                file << "|" << endl;
-                file << "| " << "Departamento:    " << departamento <<setw(10);
-                file << "| " << "Sueldo:                        Q " << right << sueldo << setw(4);
-                file << "| " << "ISR:                           Q " << right << isr << setw(4);
-                file << "|" << endl;
-                file << "| " << "Genero:          " << genero << setw(10);
-                file << "| " << "Bonificaciones:                Q " << right << bonificacionIncentiva << setw(5);
-                file << "| " << "IGGS:                          Q " << right << iggs << setw(4);
-                file << "|" << endl;
-                file << "| " << "DPI:             " << dpi << setw(10);
-                file << "| " << "Comisiones:                    Q " << right << comisiones << setw(5);
-                file << "| " << "IRTRA:                         Q " << right << irtra << setw(8);
-                file << "|" << endl;
-                file << "| " << "Telefono 1:      " << telefono << setw(10);
-                file << "| " << "Percepciones Extraordinarias:  Q " << right << percepciones_extra << setw(5);
-                file << "| " << "Prestamos:                     Q " << right << prestamos << setw(7);
-                file << "|" << endl;
-                file << "| " << "Telefono 2:      " << telefono1 << setw(10);
-                file << "| " << "Horas Extra:                   Q " << right << horas_extra << setw(6);
-                file << "|" << endl;
-                file << "| " << "Cuenta Bancaria: " << numCuenta << setw(10);
-                file << "| " << "Total Percepciones:            Q " << right << total_percepciones << setw(4);
-                file << "| " << "Total Deducciones:             Q " << right << deducciones_totales << setw(7);
-                file << "|" << endl;
-                file << "| " << setw(120);
-                file << "|" << endl;
-                file << "| " << "TOTAL SUELDO LIQUIDO Q " << sueldo_liquido << setw(91);
-                file << "|" << endl;
-                file << "| " << setw(120);
-                file << "|" << endl;
-                file << "| " << "Fecha de emision: " << dia << "/" << mes << setw(98);
-                file << "|" << endl;*/
 			}
 			else{
                 int num_empleados;
@@ -435,53 +405,16 @@ void DatosEmpleado::modificar()
                     <<std::left<<std::setw(15)<< telefono1 <<std::left<<std::setw(15)<< numCuenta <<std::left<<std::setw(15)<< sueldo <<std::left<<std::setw(15)<< bonificacionIncentiva <<std::left<<std::setw(15)<< comisiones <<std::left<<std::setw(15)<< percepciones_extra <<std::left<<std::setw(15)<< horas_extra
                     <<std::left<<std::setw(15)<< total_percepciones <<std::left<<std::setw(15)<< isr <<std::left<<std::setw(15)<< iggs <<std::left<<std::setw(15)<< irtra <<std::left<<std::setw(15)<< prestamos <<std::left<<std::setw(15)<< deducciones_totales <<std::left<<std::setw(15)<< sueldo_liquido << "\n";
 
-            file.close();
+                file.close();
 
-                /*file <<"\n\n\t\t\t Id Persona: "<<id<<endl;
-                file << "|" << setw(20) << "         Datos del trabajador         |" << setw(7) << "           Percepciones Empleados          |" << setw(6) << "           Deducciones Empleados           |" << endl;
-                file << "| " << "Nombre:          " << nombre << " " << apellido << setw(10);
-                file << "|" << endl;
-                file << "| " << "Puesto:          " << puesto<< setw(10);
-                file << "|" << endl;
-                file << "| " << "Departamento:    " << departamento <<setw(10);
-                file << "| " << "Sueldo:                        Q " << right << sueldo << setw(4);
-                file << "| " << "ISR:                           Q " << right << isr << setw(4);
-                file << "|" << endl;
-                file << "| " << "Genero:          " << genero << setw(10);
-                file << "| " << "Bonificaciones:                Q " << right << bonificacionIncentiva << setw(5);
-                file << "| " << "IGGS:                          Q " << right << iggs << setw(4);
-                file << "|" << endl;
-                file << "| " << "DPI:             " << dpi << setw(10);
-                file << "| " << "Comisiones:                    Q " << right << comisiones << setw(5);
-                file << "| " << "IRTRA:                         Q " << right << irtra << setw(8);
-                file << "|" << endl;
-                file << "| " << "Telefono 1:      " << telefono << setw(10);
-                file << "| " << "Percepciones Extraordinarias:  Q " << right << percepciones_extra << setw(5);
-                file << "| " << "Prestamos:                     Q " << right << prestamos << setw(7);
-                file << "|" << endl;
-                file << "| " << "Telefono 2:      " << telefono1 << setw(10);
-                file << "| " << "Horas Extra:                   Q " << right << horas_extra << setw(6);
-                file << "|" << endl;
-                file << "| " << "Cuenta Bancaria: " << numCuenta << setw(10);
-                file << "| " << "Total Percepciones:            Q " << right << total_percepciones << setw(4);
-                file << "| " << "Total Deducciones:             Q " << right << deducciones_totales << setw(7);
-                file << "|" << endl;
-                file << "| " << setw(120);
-                file << "|" << endl;
-                file << "| " << "TOTAL SUELDO LIQUIDO Q " << sueldo_liquido << setw(91);
-                file << "|" << endl;
-                file << "| " << setw(120);
-                file << "|" << endl;
-                file << "| " << "Fecha de emision: " << dia << "/" << mes << setw(98);
-                file << "|" << endl;*/
             }
-		    file1 >> id>>nombre >>apellido >>genero >>puesto >>departamento >>dia >>mes >>dpi >>telefono >>telefono1 >>numCuenta >>sueldo >>bonificacionIncentiva >>comisiones >>percepciones_extra >>horas_extra >>total_percepciones >>isr >>iggs >>irtra >>prestamos >>deducciones_totales >>sueldo_liquido;
-		    }
-		    file1.close();
-		    file.close();
-		    remove("ParticipantRecord1.txt");
-		    rename("Record1.txt","ParticipantRecord.txt");
-	        }
+        file1 >> id>>nombre >>apellido >>genero >>puesto >>departamento >>dia >>mes >>dpi >>telefono >>telefono1 >>numCuenta >>sueldo >>bonificacionIncentiva >>comisiones >>percepciones_extra >>horas_extra >>total_percepciones >>isr >>iggs >>irtra >>prestamos >>deducciones_totales >>sueldo_liquido;
+        }
+        file1.close();
+        file.close();
+        remove("ParticipantRecord1.txt");
+        rename("Record1.txt","ParticipantRecord.txt");
+    }
 }
 
 
@@ -554,44 +487,6 @@ void DatosEmpleado::buscar()
 		}
 		file.close();
 	}
-
-    /*system("cls");
-    cout<<"\n-------------------------Tabla de Detalles de Personas -------------------------"<<endl;
-       // Abre el archivo en modo de lectura
-    ifstream file("ParticipantRecord1.txt");
-
-    // Lee la ID que deseas buscar
-    string id_buscada;
-    cout << "Ingresa la ID que deseas buscar: ";
-    cin >> id_buscada;
-
-    //GuardarEmpleados ingresando(id_buscada);
-    //ingresando.mostrarEmpleados(id_buscada);
-
-    // Busca la ID en el archivo
-    bool encontrado = false;
-    string linea;
-    while (getline(file, linea)) {
-        if (linea.find(id_buscada) != string::npos) {
-            encontrado = true;
-            cout << linea << endl; // Muestra la línea que contiene la ID buscada
-            while (getline(file, linea)) {
-                if (linea.find("Id Persona:") != string::npos) {
-                    // Se encontró una nueva ID, se detiene la búsqueda
-                    break;
-                }
-                cout << linea << endl; // Muestra la línea siguiente
-            }
-        }
-    }
-
-    // Cierra el archivo
-    file.close();
-
-    // Si la ID no se encontró, se muestra un mensaje
-    if (!encontrado) {
-        cout << "No se encontró la ID buscada." << endl;
-    }*/
 }
 
 void DatosEmpleado::borrar()

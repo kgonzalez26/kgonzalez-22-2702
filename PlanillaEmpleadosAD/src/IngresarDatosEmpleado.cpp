@@ -10,150 +10,150 @@
 using namespace std;
 
 
-IngresarDatosEmpleado::IngresarDatosEmpleado(int id, string nombre, string apellido, string genero, string puesto, string departamento, int dia, int mes, int dpi, int telefono, int telefono1, int numCuenta, float sueldo, float comisiones, float percepciones_extra, float horas_extra, float isr)
+IngresarDatosEmpleado::IngresarDatosEmpleado(int idE, string nombreE, string apellidoE, string generoE, string puestoE, string departamentoE, int diaE, int mesE, int dpiE, int telefonoE, int telefono1E, int numCuentaE, float sueldoE, float comisionesE, float percepciones_extraE, float horas_extraE, float isrE)
 {
     //El valor del parámetro se asigna al miembro de la clase.
     //El operador this se usa para referirse al miembro de la clase y no al parámetro de la función que tiene el mismo nombre.
-    this->id = id;
-    this->nombre = nombre;
-    this->apellido = apellido;
-    this->genero = genero;
-    this->puesto = puesto;
-    this->departamento = departamento;
-    this->dia = dia;
-    this->mes = mes;
-    this->dpi = dpi;
-    this->telefono = telefono;
-    this->telefono1 = telefono1;
-    this->numCuenta = numCuenta;
-    this->sueldo = sueldo;
-    this->comisiones = comisiones;
-    this->percepciones_extra = percepciones_extra;
-    this->horas_extra = horas_extra;
-    this->isr = isr;
+    this->id = idE;
+    this->nombre = nombreE;
+    this->apellido = apellidoE;
+    this->genero = generoE;
+    this->puesto = puestoE;
+    this->departamento = departamentoE;
+    this->dia = diaE;
+    this->mes = mesE;
+    this->dpi = dpiE;
+    this->telefono = telefonoE;
+    this->telefono1 = telefono1E;
+    this->numCuenta = numCuentaE;
+    this->sueldo = sueldoE;
+    this->comisiones = comisionesE;
+    this->percepciones_extra = percepciones_extraE;
+    this->horas_extra = horas_extraE;
+    this->isr = isrE;
 }
 
 // set y get para nid
-int IngresarDatosEmpleado::setId(int id) {
-    this->id = id;
+int IngresarDatosEmpleado::setId(int idE) {
+    this->id = idE;
 }
 int IngresarDatosEmpleado::getId() {
     return this->id;
 }
 
 // set y get para nombre
-string IngresarDatosEmpleado::setNombre(string nombre) {
-    this->nombre = nombre;
+string IngresarDatosEmpleado::setNombre(string nombreE) {
+    this->nombre = nombreE;
 }
 string IngresarDatosEmpleado::getNombre() {
     return this->nombre;
 }
 
 // set y get para apellido
-string IngresarDatosEmpleado::setApellido(string apellido) {
-    this->apellido = apellido;
+string IngresarDatosEmpleado::setApellido(string apellidoE) {
+    this->apellido = apellidoE;
 }
 string IngresarDatosEmpleado::getApellido() {
     return this->apellido;
 }
 
 // set y get para genero
-string IngresarDatosEmpleado::setGenero(string genero) {
-    this->genero = genero;
+string IngresarDatosEmpleado::setGenero(string generoE) {
+    this->genero = generoE;
 }
 string IngresarDatosEmpleado::getGenero() {
     return this->genero;
 }
 
 // set y get para dia
-int IngresarDatosEmpleado::setDia(int dia) {
-    this->dia = dia;
+int IngresarDatosEmpleado::setDia(int diaE) {
+    this->dia = diaE;
 }
 int IngresarDatosEmpleado::getDia() {
     return this->dia;
 }
 
 // set y get para mes
-int IngresarDatosEmpleado::setMes(int mes) {
-    this->mes = mes;
+int IngresarDatosEmpleado::setMes(int mesE) {
+    this->mes = mesE;
 }
 int IngresarDatosEmpleado::getMes() {
     return this->mes;
 }
 
 // set y get para dpi
-int IngresarDatosEmpleado::setDpi(int dpi) {
-    this->dpi = dpi;
+int IngresarDatosEmpleado::setDpi(int dpiE) {
+    this->dpi = dpiE;
 }
 int IngresarDatosEmpleado::getDpi() {
     return this->dpi;
 }
 
 // set y get para telefono
-int IngresarDatosEmpleado::setTelefono(int telefono) {
-    this->telefono = telefono;
+int IngresarDatosEmpleado::setTelefono(int telefonoE) {
+    this->telefono = telefonoE;
 }
 int IngresarDatosEmpleado::getTelefono() {
     return this->telefono;
 }
 
 // set y get para telefono1
-int IngresarDatosEmpleado::setTelefono1(int telefono1) {
-    this->telefono1 = telefono1;
+int IngresarDatosEmpleado::setTelefono1(int telefono1E) {
+    this->telefono1 = telefono1E;
 }
 int IngresarDatosEmpleado::getTelefono1() {
     return this->telefono1;
 }
 
 // set y get para numCuenta
-int IngresarDatosEmpleado::setNumCuenta(int numCuenta) {
-    this->numCuenta = numCuenta;
+int IngresarDatosEmpleado::setNumCuenta(int numCuentaE) {
+    this->numCuenta = numCuentaE;
 }
 int IngresarDatosEmpleado::getNumCuenta() {
     return this->numCuenta;
 }
 
 // set y get para sueldo
-float IngresarDatosEmpleado::setSueldo(float sueldo) {
-    this->sueldo = sueldo;
+float IngresarDatosEmpleado::setSueldo(float sueldoE) {
+    this->sueldo = sueldoE;
 }
 float IngresarDatosEmpleado::getSueldo() {
     return this->sueldo;
 }
 
 // set y get para comisiones
-float IngresarDatosEmpleado::setComisiones(float comisiones) {
-    this->comisiones = comisiones;
+float IngresarDatosEmpleado::setComisiones(float comisionesE) {
+    this->comisiones = comisionesE;
 }
 float IngresarDatosEmpleado::getComisiones() {
     return this->comisiones;
 }
 
 // set y get para percepciones_extra
-float IngresarDatosEmpleado::setPercepciones_extra(float percepciones_extras){
-    this->percepciones_extra = percepciones_extras;
+float IngresarDatosEmpleado::setPercepciones_extra(float percepciones_extrasE){
+    this->percepciones_extra = percepciones_extrasE;
 }
 float IngresarDatosEmpleado::getPercepciones_extra(){
     return this->percepciones_extra;
 }
 
 // set y get para horas_extra
-float IngresarDatosEmpleado::setHoras_extra(float horas_extra) {
-    this->horas_extra = horas_extra;
+float IngresarDatosEmpleado::setHoras_extra(float horas_extraE) {
+    this->horas_extra = horas_extraE;
 }
 float IngresarDatosEmpleado::getHoras_extra() {
     return this->horas_extra;
 }
 
 // set y get para isr
-float IngresarDatosEmpleado::setIsr(float isr) {
-    this->isr = isr;
+float IngresarDatosEmpleado::setIsr(float isrE) {
+    this->isr = isrE;
 }
 float IngresarDatosEmpleado::getIsr() {
     return this->isr;
 }
 
-void IngresarDatosEmpleado::menuDatosEmpleado()
+void IngresarDatosEmpleado::menuIngresarDatosEmpleado()
 {
     bool salir = false;
     int choice;
@@ -167,10 +167,11 @@ void IngresarDatosEmpleado::menuDatosEmpleado()
 	cout<<"\t\t\t 1. Datos Personales"<<endl;
 	cout<<"\t\t\t 2. Puesto del Empleado"<<endl;
 	cout<<"\t\t\t 3. Departamento del Empleado"<<endl;
-	cout<<"\t\t\t 4. Exit"<<endl;
+	cout<<"\t\t\t 4. Agregar los Datos del Empleado"<<endl;
+	cout<<"\t\t\t 5. Exit"<<endl;
 
 	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3/4]"<<endl;
+	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5]"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"Ingresa tu Opcion: ";
     cin>>choice;
@@ -186,13 +187,105 @@ void IngresarDatosEmpleado::menuDatosEmpleado()
 	case 3:
 		insertarDatosDepartamento();
 		break;
-	case 4:
+    case 4:
+		insertar();
+		break;
+	case 5:
 		salir = true;
     default:
         cout<<"\t\t\t\nSaliendo del menu";
 	}
 	getch();
-    }while(choice!= 4);
+    }while(choice!= 5);
+}
+
+void IngresarDatosEmpleado::menuIngresarProcesos()
+{
+    system("cls");
+    fstream file,file1;
+    int found=0;
+    int participant_id;
+    cout<<"\n-------------------------Agregar Procesos Empleado-------------------------"<<endl;
+    file1.open("Record1.txt", ios::in);
+    if(!file1) {
+        cout<<"\n\t\t\tNo hay informacion..,";
+        file1.close();
+    } else {
+        cout<<"\n Ingrese Id del empleado que desea actualizar: ";
+        cin>>participant_id;
+        file.open("ParticipantRecord1.txt", ios::app | ios::out);
+        file1 >> id >>nombre >>apellido >>genero >>puesto >>departamento >>dia >>mes >>dpi >>telefono >>telefono1 >>numCuenta >>sueldo >>bonificacionIncentiva >>comisiones >>percepciones_extra >>horas_extra >>total_percepciones >>isr >>iggs >>irtra >>prestamos >>deducciones_totales >>sueldo_liquido;
+        while(!file1.eof())
+        {
+			if(participant_id=id)
+			{
+                bool salir = false;
+                int choice;
+
+                fstream file2;
+                file2.open("Bitacora.txt", ios::app | ios::out);
+
+                int accion0 = 7001;
+                int accion1 = 7002;
+                int accion2 = 7003;
+                int accion3 = 7004;
+                int accion4 = 7005;
+
+                found++;
+
+                do
+                {
+                    system("cls");
+                    cout <<"\t\t\t---------------------------------------"<<endl;
+                    cout <<"\t\t\t|MENU DE INGRESO DE DATOS DE PLANILLA|"<<endl;
+                    cout <<"\t\t\t---------------------------------------"<<endl;
+                    cout<<"\t\t\t 1. Ingreso de Percepciones del Empledo"<<endl;
+                    cout<<"\t\t\t 2. Ingreso de Horas Extras del Empleado"<<endl;
+                    cout<<"\t\t\t 3. Ingreso de Deducciones del Empleado"<<endl;
+                    cout<<"\t\t\t 4. Agregar los Datos del Empleado"<<endl;
+                    cout<<"\t\t\t 5. Exit"<<endl;
+
+                    cout<<"\t\t\t-------------------------------"<<endl;
+                    cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5]"<<endl;
+                    cout<<"\t\t\t-------------------------------"<<endl;
+                    cout<<"Ingresa tu Opcion: ";
+                    cin>>choice;
+
+                    switch(choice)
+                    {
+                    case 1:
+                        insertarPercepciones();
+                        file2<<"\t\t\tAccion: Ingreso Percepciones - " <<accion1<<"\n"<<endl;
+                        break;
+                    case 2:
+                        insertarHorasExtras();
+                        file2<<"\t\t\tAccion: Ingreso Horas Extras - " <<accion2<<"\n"<<endl;
+                        break;
+                    case 3:
+                        insertarDeducciones();
+                        file2<<"\t\t\tAccion: Ingreso Deducciones - " <<accion3<<"\n"<<endl;
+                        break;
+                    case 4:
+                        insertar2();
+                        file2<<"\t\t\tAccion: Ingreso Todos los Datos - " <<accion4<<"\n"<<endl;
+                        break;
+                    case 5:
+                        salir = true;
+                    default:
+                        cout<<"\t\t\t\nSaliendo del menu";
+                    }
+                    getch();
+                }while(choice!= 5);
+                file2.close();
+                break;
+            }
+        }
+        if(found==0)
+		{
+			cout << "No se encontró ningún registro con esa ID." << endl;
+		}
+		file.close();
+    }
 }
 
 void IngresarDatosEmpleado::insertarDatos()
@@ -288,7 +381,56 @@ void IngresarDatosEmpleado::insertarDeducciones()
     cin >> prestamos;
     cout<<"\t\t\t\nSE INGRESO CORRECTAMENTE!!!";
 }
+
 void IngresarDatosEmpleado::insertar()
+{
+    //Limpia la pantalla
+    system("cls");
+
+    //Declara variables necesarias
+    char x;
+
+    //Crea un objeto filestream para trabajar con archivos
+    fstream file1;
+
+    //Imprime texto en la consola
+    cout<<"\n------------------------------------------------------------------------------------------------------------------------";
+    cout<<"\n-------------------------------------------------Agregar a Empleado-----------------------------------------------------"<<endl;
+
+    //Pide al usuario si desea agregar un empleado
+    cout<<"\t\t\t\n¿Quiere agregar al empleado?(Y,N): ";
+    cin>>x;
+
+    //Si el usuario elige "y" o "Y", entra al bloque de código dentro del if
+    if (x=='y'||x=='Y'){
+
+        float sueldo = 0;
+        float comisiones = 0;
+        float percepciones_extra = 0;
+        float horas_extra = 0;
+        float isr = 0;
+        float iggs = 0;
+        float prestamos = 0;
+        float deducciones_totales = 0;
+        float sueldo_liquido = 0;
+        float irtra = 0;
+        float total_percepciones = 0;
+        float bonificacionIncentiva = 0;
+
+        //Abre el archivo "Record1.txt" para guardar como archivo de acceso aleatorio
+        file1.open("Record1.txt", ios::app | ios::out);
+        file1<<std::left<<std::setw(10)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< apellido <<std::left<<std::setw(15)<< genero <<std::left<<std::setw(15)<< puesto  <<std::left<<std::setw(15)<< departamento <<std::left<<std::setw(15)<< dia <<std::left<<std::setw(15)<< mes <<std::left<<std::setw(15)<< dpi <<std::left<<std::setw(15)<< telefono
+            <<std::left<<std::setw(15)<< telefono1 <<std::left<<std::setw(15)<< numCuenta <<std::left<<std::setw(15)<< sueldo <<std::left<<std::setw(15)<< bonificacionIncentiva <<std::left<<std::setw(15)<< comisiones <<std::left<<std::setw(15)<< percepciones_extra <<std::left<<std::setw(15)<< horas_extra
+            <<std::left<<std::setw(15)<< total_percepciones <<std::left<<std::setw(15)<< isr <<std::left<<std::setw(15)<< iggs <<std::left<<std::setw(15)<< irtra <<std::left<<std::setw(15)<< prestamos <<std::left<<std::setw(15)<< deducciones_totales <<std::left<<std::setw(15)<< sueldo_liquido << "\n";
+
+        file1.close();
+
+         cout << "Empleado guardado exitosamente" << endl;
+
+    }
+}
+
+void IngresarDatosEmpleado::insertar2()
 {
 	    //Limpia la pantalla
     system("cls");
@@ -322,59 +464,14 @@ void IngresarDatosEmpleado::insertar()
         sueldo_liquido = total_percepciones - deducciones_totales;
 
         //Abre el archivo "ParticipantRecord1.txt" para guardar como archivo de acceso aleatorio
-       file.open("ParticipantRecord1.txt", ios::app | ios::out);
-        file<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< apellido <<std::left<<std::setw(15)<< genero <<std::left<<std::setw(15)<< puesto  <<std::left<<std::setw(15)<< departamento <<std::left<<std::setw(15)<< dia <<std::left<<std::setw(15)<< mes <<std::left<<std::setw(15)<< dpi <<std::left<<std::setw(15)<< telefono
-            <<std::left<<std::setw(15)<< telefono1 <<std::left<<std::setw(15)<< numCuenta <<std::left<<std::setw(15)<< sueldo <<std::left<<std::setw(15)<< bonificacionIncentiva <<std::left<<std::setw(15)<< comisiones <<std::left<<std::setw(15)<< percepciones_extra <<std::left<<std::setw(15)<< horas_extra
-            <<std::left<<std::setw(15)<< total_percepciones <<std::left<<std::setw(15)<< isr <<std::left<<std::setw(15)<< iggs <<std::left<<std::setw(15)<< irtra <<std::left<<std::setw(15)<< prestamos <<std::left<<std::setw(15)<< deducciones_totales <<std::left<<std::setw(15)<< sueldo_liquido << "\n";
+        file.open("ParticipantRecord1.txt", ios::app | ios::out);
+        file<<std::left<<std::setw(10)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< apellido <<std::left<<std::setw(15)<< genero <<std::left<<std::setw(15)<< puesto  <<std::left<<std::setw(15)<< departamento <<std::left<<std::setw(15)<< dia <<std::left<<std::setw(15)<< mes <<std::left<<std::setw(15)<< dpi <<std::left<<std::setw(15)<< telefono
+             <<std::left<<std::setw(15)<< telefono1 <<std::left<<std::setw(15)<< numCuenta <<std::left<<std::setw(15)<< sueldo <<std::left<<std::setw(15)<< bonificacionIncentiva <<std::left<<std::setw(15)<< comisiones <<std::left<<std::setw(15)<< percepciones_extra <<std::left<<std::setw(15)<< horas_extra
+             <<std::left<<std::setw(15)<< total_percepciones <<std::left<<std::setw(15)<< isr <<std::left<<std::setw(15)<< iggs <<std::left<<std::setw(15)<< irtra <<std::left<<std::setw(15)<< prestamos <<std::left<<std::setw(15)<< deducciones_totales <<std::left<<std::setw(15)<< sueldo_liquido << "\n";
 
         file.close();
 
-       /* //Abre el archivo "ParticipantRecord1.txt" en modo de agregar y escritura
-       file.open("ParticipantRecord1.txt", ios::app | ios::out);
+         cout << "Empleado guardado exitosamente" << endl;
 
-        //Escribe la información del empleado en el archivo
-	   file <<"\n\n\t\t\t Id Persona: "<<id<<endl;
-       file << "|" << setw(20) << "         Datos del trabajador         |" << setw(7) << "           Percepciones Empleados          |" << setw(6) << "           Deducciones Empleados           |" << endl;
-	   file << "| " << "Nombre:          " << nombre << " " << apellido << setw(10);
-	   file << "|" << endl;
-	   file << "| " << "Puesto:          " << puesto<< setw(10);
-	   file << "|" << endl;
-       file << "| " << "Departamento:    " << departamento <<setw(10);
-       file << "| " << "Sueldo:                        Q " << right << sueldo << setw(4);
-       file << "| " << "ISR:                           Q " << right << isr << setw(4);
-       file << "|" << endl;
-       file << "| " << "Genero:          " << genero << setw(10);
-       file << "| " << "Bonificaciones:                Q " << right << bonificacionIncentiva << setw(5);
-       file << "| " << "IGGS:                          Q " << right << iggs << setw(4);
-       file << "|" << endl;
-       file << "| " << "DPI:             " << dpi << setw(10);
-       file << "| " << "Comisiones:                    Q " << right << comisiones << setw(5);
-       file << "| " << "IRTRA:                         Q " << right << irtra << setw(8);
-       file << "|" << endl;
-       file << "| " << "Telefono 1:      " << telefono << setw(10);
-       file << "| " << "Percepciones Extraordinarias:  Q " << right << percepciones_extra << setw(5);
-       file << "| " << "Prestamos:                     Q " << right << prestamos << setw(7);
-       file << "|" << endl;
-       file << "| " << "Telefono 2:      " << telefono1 << setw(10);
-       file << "| " << "Horas Extra:                   Q " << right << horas_extra << setw(6);
-       file << "|" << endl;
-       file << "| " << "Cuenta Bancaria: " << numCuenta << setw(10);
-       file << "| " << "Total Percepciones:            Q " << right << total_percepciones << setw(4);
-       file << "| " << "Total Deducciones:             Q " << right << deducciones_totales << setw(7);
-       file << "|" << endl;
-       file << "| " << setw(120);
-       file << "|" << endl;
-       file << "| " << "TOTAL SUELDO LIQUIDO Q " << sueldo_liquido << setw(91);
-       file << "|" << endl;
-       file << "| " << setw(120);
-       file << "|" << endl;
-       file << "| " << "Fecha de emision: " << dia << "/" << mes << setw(98);
-       file << "|" << endl;
-	   file.close();//Cierra el archivo
-	   cout<<"\t\t\t\nSE INGRESO CORRECTAMENTE AL EMPLEADO!!!";
-	   }else{
-	       cout<<"\t\t\t\nNo se realizara ninguna operacion";
-	   }*/
-
-}
+    }
 }
