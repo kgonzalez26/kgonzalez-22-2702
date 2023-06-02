@@ -22,6 +22,18 @@ bool mapcell::isBlockedCell()
         return false;
     }
 }
+bool mapcell::isBlockedCel2()
+{
+    //cout << "caracter visitado=" << id << endl;
+    if( id == '#')
+    //if( id == 178)
+    {
+        return true;
+    } else
+    {
+        return false;
+    }
+}
 mapcell::~mapcell()
 {
     //dtor

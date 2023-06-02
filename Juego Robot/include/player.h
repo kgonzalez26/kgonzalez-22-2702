@@ -15,11 +15,15 @@ class player
         void setValueY(int valueY);
         void resetToSafePosition();
         void drawCreditos();
+        void setM(int M);
+        int getM();
 
     protected:
 
     private:
         int x, y;
+        int M;
+        int m = 0;
 
 };
 

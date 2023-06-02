@@ -10,6 +10,7 @@ class mapcell
         char id;
         mapcell();
         bool isBlockedCell();
+        bool isBlockedCel2();
         virtual ~mapcell();
 
     protected:

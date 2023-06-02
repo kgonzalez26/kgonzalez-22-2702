@@ -36,11 +36,15 @@
 		</Compiler>
 		<Unit filename="include/game.h" />
 		<Unit filename="include/gamemap.h" />
+		<Unit filename="include/gamemap2.h" />
+		<Unit filename="include/gamemap3.h" />
 		<Unit filename="include/mapcell.h" />
 		<Unit filename="include/player.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/game.cpp" />
 		<Unit filename="src/gamemap.cpp" />
+		<Unit filename="src/gamemap2.cpp" />
+		<Unit filename="src/gamemap3.cpp" />
 		<Unit filename="src/mapcell.cpp" />
 		<Unit filename="src/player.cpp" />
 		<Extensions>

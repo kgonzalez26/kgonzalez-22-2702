@@ -1,19 +1,19 @@
-#include "gamemap.h"
+#include "gamemap2.h"
 #include "player.h"
 #include <iostream>
 #include <fstream>
 //Implementacion de toda la funcionabilidad del mapa del juego
 
 using namespace std;
-gamemap::gamemap()
+gamemap2::gamemap2()
 {
     //ctor
-    playerCell = NULL;
-    loadMapFromFile();
+    playerCell2 = NULL;
+    loadMapFromFile2();
     isGameOver = false;
 }
 
-void gamemap::draw(){
+void gamemap2::draw(){
     //system("cls");
     for (int i = 0; i < 15; i++)
     {
@@ -25,8 +25,10 @@ void gamemap::draw(){
         cout << endl;
     }
 }
-bool gamemap::setPlayerCell(int playerX, int playerY)
+
+bool gamemap2::setPlayerCel2(int playerX, int playerY)
 {
+    string opcion;
     if (cell[playerX][playerY].isBlockedCell() == false && cell[playerX][playerY].isBlockedCel2() == false)
     {
         if (cell[playerX][playerY].id == '$')
@@ -37,17 +39,17 @@ bool gamemap::setPlayerCell(int playerX, int playerY)
         } else
         { // evalúa espacio
             //Se verifica que maque con cero la posicion que abandona el jugador
-            if (playerCell != NULL)
+            if (playerCell2 != NULL)
             {
                 // Cambio permitira quitar los ceros en el camino del jugador, al traslador un cero a un char se convierte en espacio
                 //playerCell->id='0';
-                playerCell->id=0;
+                playerCell2->id=0;
             }
-            //cout << "Las coordenadas del jugador estan en: " << playerX << "," << playerY << endl;
+            cout << "Las coordenadas del jugador estan en: " << playerX << "," << playerY << endl;
             //Cambio de coordenadas para corregiro problema de los movimientos del jugador en el eje X
             //playerCell = &cell[playerY][playerX];
-            playerCell = &cell[playerX][playerY];
-            playerCell->id='®';//ascii 169
+            playerCell2 = &cell[playerX][playerY];
+            playerCell2->id='®';//ascii 169
         }
 
         return true;
@@ -58,12 +60,12 @@ bool gamemap::setPlayerCell(int playerX, int playerY)
     }
 
 }
-void gamemap::loadMapFromFile()
+void gamemap2::loadMapFromFile2()
 {
     string line;
     int row = 0;
     char userInput = ' ';
-    ifstream myFile("map.txt");
+    ifstream myFile("map2.txt");
     if(myFile.is_open())
     {
         //Se obtiene el mapa externo y se general el mapa de celdas
@@ -79,8 +81,8 @@ void gamemap::loadMapFromFile()
                 {
                     cell[row][p].id = line[p];
                 }
-                // Cambio para quitar ceros y colocar espacios en blanco en el mapa
-                // cell[row][p].id = line[p];
+                //Cambio para quitar ceros y colocar espacios en blanco en el mapa
+                //cell[row][p].id = line[p];
             }
 
             row++;
@@ -90,11 +92,10 @@ void gamemap::loadMapFromFile()
     else
     {
         cout << "Error FATAL: archivo del mapa no pudo ser cargado" << endl;
-        cout << "Desea crearlo? " << endl;
         cin >> userInput;
         if (userInput='s')
         {
-            createMapToFile();
+            createMapToFile2();
         } else
         {
             cout << "NO podemos continuar el juego" << endl;
@@ -102,9 +103,9 @@ void gamemap::loadMapFromFile()
     }
 
 }
-void gamemap::createMapToFile()
+void gamemap2::createMapToFile2()
 {
-    ofstream myFile("map.txt");
+    ofstream myFile("map2.txt");
     if (myFile.is_open())
     {
         for (int i = 0; i < 15; i++)
@@ -124,6 +125,7 @@ void gamemap::createMapToFile()
                     } else
                     {
                         myFile << "0";
+                        myFile << "#";
                     }
                 }
 
@@ -137,28 +139,7 @@ void gamemap::createMapToFile()
     }
 }
 
-void gamemap::drawPortada()
-{
-    string line;
-    char userInput = ' ';
-    ifstream myFile("portada.txt");
-    if(myFile.is_open())
-    {
-        //Se obtiene el mapa externo y se general el mapa de celdas
-        while( getline(myFile, line))
-        {
-            cout << line << endl;
-        }
-        myFile.close();
-        cin >> userInput;
-    }
-    else
-    {
-        cout << "Error FATAL: el archivo de portada no pudo ser cargado" << endl;
-    }
-}
-
-void gamemap::drawVictoria()
+void gamemap2::drawVictoria()
 {
     string line;
     char  userInput = ' ';
@@ -179,7 +160,7 @@ void gamemap::drawVictoria()
     }
 }
 
-gamemap::~gamemap()
+gamemap2::~gamemap2()
 {
     //dtor
 }

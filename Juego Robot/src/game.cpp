@@ -16,6 +16,7 @@ game::~game()
 int game::setRemainingMoves(int Moves)
 {
     this->remainingMoves = Moves;
+    return this->remainingMoves;
 }
 
 int game::getRemainingMoves()
