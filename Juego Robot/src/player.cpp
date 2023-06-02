@@ -46,8 +46,6 @@ void player::callInput()
 {
     //char userInput = ' ';
     //cin >> userInput;
-    int Moves;
-    game newGame(Moves);
     if (kbhit())
     {
         char userInput = getch();

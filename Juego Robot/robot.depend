@@ -422,11 +422,11 @@
 	<fstream>
 	<conio.h>
 
-1685723743 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\proyecto grupo\carpeta favio\tareasp1-9959-22-1125\implementaciones juego robot\juego robot\src\game.cpp
+1685730257 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\proyecto grupo\carpeta favio\tareasp1-9959-22-1125\implementaciones juego robot\juego robot\src\game.cpp
 	"game.h"
 	<iostream>
 
-1685723743 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\proyecto grupo\carpeta favio\tareasp1-9959-22-1125\implementaciones juego robot\juego robot\include\game.h
+1685730244 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\proyecto grupo\carpeta favio\tareasp1-9959-22-1125\implementaciones juego robot\juego robot\include\game.h
 
 1685719049 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\proyecto grupo\carpeta favio\tareasp1-9959-22-1125\implementaciones juego robot\juego robot\src\gamemap.cpp
 	"gamemap.h"
@@ -463,14 +463,14 @@
 	"mapcell.h"
 	<iostream>
 
-1685727906 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\proyecto grupo\carpeta favio\tareasp1-9959-22-1125\implementaciones juego robot\juego robot\src\player.cpp
+1685730284 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\proyecto grupo\carpeta favio\tareasp1-9959-22-1125\implementaciones juego robot\juego robot\src\player.cpp
 	"player.h"
 	"game.h"
 	<iostream>
 	<fstream>
 	<conio.h>
 
-1685727842 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\proyecto grupo\carpeta favio\tareasp1-9959-22-1125\implementaciones juego robot\juego robot\main.cpp
+1685730480 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\proyecto grupo\carpeta favio\tareasp1-9959-22-1125\implementaciones juego robot\juego robot\main.cpp
 	<iostream>
 	<windows.h>
 	"player.h"

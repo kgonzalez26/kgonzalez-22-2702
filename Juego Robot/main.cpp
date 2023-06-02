@@ -25,14 +25,15 @@ int main()
     int segundos3 = 30;
 
     const int Moves = 30;// Número de movimientos restantes
-
+    const int Moves2 = 40;// Número de movimientos restantes
+    const int Moves3 = 50;// Número de movimientos restantes
 
     gamemap map;
     gamemap2 map2;
     gamemap3 map3;
 
     player hero;
-    game newGame(Moves);
+    game newGame(Moves, Moves2, Moves3);
     map.drawPortada();
     //map.draw();
     cout << "---------------------------------------------------------------------------------------\n";
@@ -124,7 +125,7 @@ if (map.isGameOver==true)
     while(map2.isGameOver==false)
     {
       cout << "Tiempo restante: " << minutos2 << ":" << segundos2 << endl;
-      cout << "MOVIMIENTOS RESTANTES: " << newGame.getRemainingMoves() << endl;
+      cout << "MOVIMIENTOS RESTANTES: " << newGame.getRemainingMoves2() << endl;
       cout << "Introduce comando de movimiento <w>, <a>, <s>, <d> : <x> --> Salir " << endl;
       hero.callInput();
       //newGame.reduceMoves();
@@ -161,12 +162,12 @@ if (map.isGameOver==true)
       //Reduce los movimientos restantes del jugador en 1
       if (hero.getM() > 0 )
         {
-            newGame.reduceMoves();
+            newGame.reduceMoves2();
             hero.setM(0);
         }
 
       //Si los movimientos restantes llegan a 0 termina el juego
-      if (newGame.getRemainingMoves() <= -1)
+      if (newGame.getRemainingMoves2() <= -1)
       {
           cout << endl;
           cout << " -- Limite de movimientos alcanzado -- " << endl;
@@ -197,7 +198,7 @@ if (map.isGameOver==true)
       while(map3.isGameOver==false)
     {
       cout << "Tiempo restante: " << minutos3 << ":" << segundos3 << endl;
-      cout << "MOVIMIENTOS RESTANTES: " << newGame.getRemainingMoves() << endl;
+      cout << "MOVIMIENTOS RESTANTES: " << newGame.getRemainingMoves3() << endl;
       cout << "Introduce comando de movimiento <w>, <a>, <s>, <d> : <x> --> Salir " << endl;
       hero.callInput();
       //newGame.reduceMoves();
@@ -235,12 +236,12 @@ if (map.isGameOver==true)
       //Reduce los movimientos restantes del jugador en 1
       if (hero.getM() > 0 )
         {
-            newGame.reduceMoves();
+            newGame.reduceMoves3();
             hero.setM(0);
         }
 
           //Si los movimientos restantes llegan a 0 termina el juego
-      if (newGame.getRemainingMoves() <= -1)
+      if (newGame.getRemainingMoves3() <= -1)
       {
           cout << endl;
           cout << " -- Limite de movimientos alcanzado -- " << endl;
