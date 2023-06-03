@@ -11,7 +11,22 @@ using namespace std;
 
 bitacora::bitacora()
 {
-    //ctor
+}
+
+string bitacora::setAccion(string accion) {
+    this->accion = accion;
+}
+
+string bitacora::getAccion() {
+    return this->accion;
+}
+
+string bitacora::setAplicacion(string aplicacion) {
+    this->aplicacion = aplicacion;
+}
+
+string bitacora::getAplicacion() {
+    return this->aplicacion;
 }
 
 void bitacora::desplegarBitacora()
@@ -35,4 +50,12 @@ void bitacora::desplegarBitacora()
     } else {
         cout << "No se pudo abrir el archivo" << endl;
     }
+    insertarAccion("7021", "Despliege de Bitacora");
+}
+void bitacora::insertarAccion(string aplicacion, string accion)
+{
+    fstream file2;
+    file2.open("Bitacora.txt", ios::app | ios::out);
+    file2<<"\t\t\tAplicacion: "<<aplicacion<<", Accion:" <<accion<<"\n"<<endl;
+	file2.close();
 }

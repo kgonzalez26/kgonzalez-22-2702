@@ -529,3 +529,379 @@
 
 			Accion: Ingreso Procesos a un Empleado - 7007
 
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 16:28:18
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 16:34:28
+
+			Accion: Informes Datos para Plantilla - 7022
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 16:50:14
+
+			Accion: Ingreso Datos del Empleado - 7001
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:1:29
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:5:3
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:10:19
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:15:58
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:16:19
+
+			Accion: Ingreso Procesos a un Empleado - 7007
+
+			Hora en que salio del programa: 17:16:19
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:16:58
+
+			Accion: Ingreso Datos del Empleado - 7001
+
+			Accion: Ingreso Un Usuario - 7006
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:19:0
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:19:15
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:19:52
+
+			Accion: Consulto Bitacora - 7021
+
+			Aplicacion: 7021, Accion:Despliege de Bitacora
+
+			Accion: Informes Datos para Plantilla - 7022
+
+			Accion: Informes Datos para Usuarios - 7023
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:22:52
+
+			Accion: Ingreso Datos del Empleado - 7001
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:34:6
+
+			Accion: Ingreso Datos del Empleado - 7001
+
+			Accion: Ingreso Procesos a un Empleado - 7007
+
+			Accion: Informes Datos para Plantilla - 7022
+
+			Accion: Informes Datos para Usuarios - 7023
+
+			Accion: Informes Datos para Usuarios - 7023
+
+			Accion: Informes Datos para Usuarios - 7023
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:38:40
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:39:42
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:44:30
+
+			Accion: Ingreso Datos del Empleado - 7001
+
+			Accion: Ingreso Un Usuario - 7006
+
+			Accion: Ingreso Percepciones - 7002
+
+			Accion: Ingreso Horas Extras - 7003
+
+			Accion: Ingreso Deducciones - 7004
+
+			Accion: Ingreso Todos los Datos - 7005
+
+			Accion: Ingreso Procesos a un Empleado - 7007
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:49:11
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:51:25
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:52:10
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:52:32
+
+
+-------------------------------------------------Bitacora de Ingreso de Usuario---------------------------------------------
+
+
+
+			LOG
+
+			Nombre del usuario         : Kevin
+
+			Fecha en que Inicio Sesion: 2/6/2023
+
+			Hora en que entro al programa: 17:54:34
+
+			Accion: Ingreso Percepciones - 7002
+
+			Accion: Ingreso Horas Extras - 7003
+
+			Accion: Ingreso Deducciones - 7004
+
+			Accion: Ingreso Todos los Datos - 7005
+
+			Accion: Ingreso Procesos a un Empleado - 7007
+
+			Accion: Ingreso Percepciones - 7002
+
+			Accion: Ingreso Horas Extras - 7003
+
+			Accion: Ingreso Deducciones - 7004
+
+			Accion: Ingreso Todos los Datos - 7005
+
+			Accion: Ingreso Procesos a un Empleado - 7007
+
+			Accion: Ingreso Percepciones - 7002
+
+			Accion: Ingreso Horas Extras - 7003
+
+			Accion: Ingreso Deducciones - 7004
+
+			Accion: Ingreso Todos los Datos - 7005
+
+			Accion: Ingreso Procesos a un Empleado - 7007
+
+			Accion: Busco a un Empleado - 7008
+
+			Accion: Modifico Un Usuario - 7010
+
+			Accion: Consulto Bitacora - 7021
+
+			Aplicacion: 7021, Accion:Despliege de Bitacora
+
+			Accion: Informes Datos para Plantilla - 7022
+
+			Accion: Informes Datos para Usuarios - 7023
+

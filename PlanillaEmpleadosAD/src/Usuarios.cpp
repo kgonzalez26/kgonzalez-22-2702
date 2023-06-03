@@ -1,4 +1,6 @@
 #include "Usuarios.h"
+#include "bitacora.h"
+
 #include<iostream>
 #include<fstream>
 #include<stdlib.h>
@@ -6,32 +8,31 @@
 #include<conio.h>
 #include<iomanip>
 
-Usuario::Usuario(string usuario, string contrasena) // Se define el constructor de la clase Usuario, que recibe como parámetros un usuario y una contraseña
+Usuario::Usuario()
 {
-    this->usuario=usuario; // Se asigna el valor del parámetro usuario al atributo usuario de la clase
-    this->contrasena=contrasena; // Se asigna el valor del parámetro contrasena al atributo contrasena de la clase
 }
 
-string Usuario::setUusuario(string usuario) { // Se define el método setUsuario, que recibe como parámetro un usuario
-    this->usuario = usuario; // Se asigna el valor del parámetro usuario al atributo usuario de la clase
+string Usuario::setUusuario(string nombre) { // Se define el método setUsuario, que recibe como parámetro un usuario
+    usuario = nombre; // Se asigna el valor del parámetro usuario al atributo usuario de la clase
 }
 
 string Usuario::getUusuario() { // Se define el método getUsuario
-    return this->usuario; // Se devuelve el valor del atributo usuario de la clase
+    return usuario; // Se devuelve el valor del atributo usuario de la clase
 }
 
-string Usuario::setContrasena(string contrasena) { // Se define el método setContrasena, que recibe como parámetro una contraseña
-    this->contrasena = contrasena; // Se asigna el valor del parámetro contrasena al atributo contrasena de la clase
+string Usuario::setContrasena(string pass) { // Se define el método setContrasena, que recibe como parámetro una contraseña
+    pass = contrasena; // Se asigna el valor del parámetro contrasena al atributo contrasena de la clase
 }
 
-string Usuario::getSontrasena(){ // Se define el método getContrasena
-    return this->contrasena; // Se devuelve el valor del atributo contrasena de la clase
+string Usuario::getContrasena(){ // Se define el método getContrasena
+    return contrasena; // Se devuelve el valor del atributo contrasena de la clase
 }
 
 void Usuario::menuUsuarios(){
     int choice; // Se declara la variable choice para almacenar la opción elegida por el usuario
 	char x; // Se declara la variable x para almacenar la respuesta del usuario al preguntar si quiere agregar otra persona
 	bool repetir = true; // Se inicializa la variable repetir en true
+	bitacora metodoAccion;
 
     fstream file2;
     file2.open("Bitacora.txt", ios::app | ios::out);
@@ -43,9 +44,9 @@ void Usuario::menuUsuarios(){
     {
 	system("cls"); // Se limpia la pantalla
 
-    cout <<"\t\t\t------------------------------"<<endl; // Se imprime un mensaje de bienvenida al menú de usuarios
-    cout <<"\t\t\t |MENU DE PROCESO DE USUARIOS|"<<endl;
-    cout <<"\t\t\t------------------------------"<<endl;
+    cout <<"\t\t\t-------------------------------"<<endl; // Se imprime un mensaje de bienvenida al menú de usuarios
+    cout <<"\t\t\t| MENU DE PROCESO DE USUARIOS |"<<endl;
+    cout <<"\t\t\t-------------------------------"<<endl;
 	cout<<"\t\t\t 1. Modificar Usuarios"<<endl; // Se imprime la opción para modificar usuarios
 	cout<<"\t\t\t 2. Borrar Usuarios"<<endl; // Se imprime la opción para borrar usuarios
 	cout<<"\t\t\t 3. Exit"<<endl; // Se imprime la opción para salir
@@ -130,7 +131,7 @@ void Usuario::desplegarUsurios()
 	int total=0; // inicializa una variable para contar el número de usuarios
 
 	// Imprime el encabezado para la tabla de usuarios registrados
-	cout<<"\n-------------------------Tabla de Usuarios Registrados-------------------------"<<endl;
+	cout<<"\n------------------------ Tabla de Usuarios Registrados ------------------------"<<endl;
 
 	file.open("Usuarios1.txt",ios::in); // abre el archivo "Usuarios1.txt" en modo lectura
 	if(!file) // si no se pudo abrir el archivo
@@ -146,8 +147,9 @@ void Usuario::desplegarUsurios()
 		while(!file.eof())
 		{
 			total++; // incrementa el contador de usuarios
+			cout<<" "<<endl;
 			cout<<"\t\t\t Nombre de usuario: "<<usuario<<endl; // muestra el nombre del usuario
-			cout<<"\t\t\t Contraseña del usuario: "<<contrasena<<endl; // muestra la contraseña del usuario
+			cout<<"\t\t\t Contrasena del usuario: "<<contrasena<<endl; // muestra la contraseña del usuario
 			file >> usuario >> contrasena; // lee el siguiente usuario del archivo
 		}
 
@@ -291,9 +293,9 @@ while (contador < 3 && !encontrado) {
 
     // Limpiar la pantalla y mostrar el título del login
     system("cls");
-    cout <<"\t\t\t-----------------"<<endl;
+    cout <<"\t\t\t---------------------"<<endl;
     cout <<"\t\t\t| LONGIN DE USUARIO |"<<endl;
-    cout <<"\t\t\t-----------------"<<endl;
+    cout <<"\t\t\t---------------------"<<endl;
 
     // Mostrar mensaje de advertencia
     cout <<"\n\t¡¡¡Advertencia: Solo tienes permitido 3 intentos!!!"<<endl;
@@ -302,7 +304,7 @@ while (contador < 3 && !encontrado) {
     // Solicitar al usuario el nombre de usuario y la contraseña
     cout << "\t\t\t\nIngrese el nombre de usuario:         ";
     cin >> usuario;
-    cout << "\t\t\t\nIngrese la contrasena:         ";
+    cout << "\t\t\t\nIngrese la contrasena:                ";
     char caracter;
     caracter = getch();
 
@@ -355,6 +357,7 @@ while (contador < 3 && !encontrado) {
 
 // Si se encontró el usuario, se retorna true
 if (encontrado) {
+    usuarioAutenticado = usuario;
     fstream file2;
     // Obtiene el tiempo actual
     time_t tiempoActual = time(0);
@@ -393,3 +396,7 @@ if (encontrado) {
     return false;
 }
 }
+string Usuario::getUsuarioAutenticado() {
+    return usuarioAutenticado;
+}
+

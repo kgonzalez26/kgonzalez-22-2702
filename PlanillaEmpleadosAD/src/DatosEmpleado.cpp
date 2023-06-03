@@ -210,11 +210,7 @@ void DatosEmpleado::menuDatos()
 		file2<<"\t\t\tAccion: Ingreso Datos del Empleado - " <<accion0<<"\n"<<endl;
 		break;
 	case 2:
-        cout << "Desea salir? Se perderan los datos no guardados (Y/N)" << endl;
-        cin >> x;
-        if (x=='y'||x=='Y'){
-            salir = true;
-        }
+        salir = true;
         break;
     default:
         cout<<"\t\t\t\nSaliendo del menu";

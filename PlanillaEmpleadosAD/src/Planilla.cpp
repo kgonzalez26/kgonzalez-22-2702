@@ -39,7 +39,7 @@ void menuCatalogos()
     DatosEmpleado empleado(id, nombre, apellido,genero, puesto, departamento, dia, mes, dpi, telefono, telefono1, numCuenta, sueldo, comisiones, percepciones_extra, horas_extra, isr);
 
     string usuario, contrasena;
-    Usuario ingreso(usuario, contrasena);
+    Usuario ingreso;
 
     fstream file2;
     file2.open("Bitacora.txt", ios::app | ios::out);
@@ -56,7 +56,7 @@ void menuCatalogos()
     cout <<"\t\t\t----------------------------------"<<endl;
     cout <<"\t\t\t|BIENVENIDO AL MENU DE CATALOGO|"<<endl;
     cout <<"\t\t\t----------------------------------"<<endl;
-	cout<<"\t\t\t 1. Ingreso Datos Para Plantilla"<<endl;
+	cout<<"\t\t\t 1. Ingreso Datos Para Planilla"<<endl;
 	cout<<"\t\t\t 2. Ingreso Datos Para Usuarios Nuevos"<<endl;
 	cout<<"\t\t\t 3. Exit"<<endl;
 
@@ -110,7 +110,7 @@ void menuProcesos()
 
 
     string usuario, contrasena;
-    Usuario ingreso(usuario, contrasena);
+    Usuario ingreso;
 
     bitacora consulta;
 
@@ -123,7 +123,7 @@ void menuProcesos()
     cout <<"\t\t\t----------------------------------"<<endl;
     cout <<"\t\t\t|BIENVENIDO AL MENU DE PROCESOS|"<<endl;
     cout <<"\t\t\t----------------------------------"<<endl;
-	cout<<"\t\t\t 1. Proceso Datos Plantilla"<<endl;
+	cout<<"\t\t\t 1. Proceso Datos Planilla"<<endl;
 	cout<<"\t\t\t 2. Proceso Datos Usuarios"<<endl;
 	cout<<"\t\t\t 3. Consulta de Bitacora"<<endl;
 	cout<<"\t\t\t 4. Exit"<<endl;
@@ -174,7 +174,7 @@ void menuInformes()
     DatosEmpleado empleado(id, nombre, apellido,genero, puesto, departamento, dia, mes, dpi, telefono, telefono1, numCuenta, sueldo, comisiones, percepciones_extra, horas_extra, isr);
 
     string usuario, contrasena;
-    Usuario ingreso(usuario, contrasena);
+    Usuario ingreso;
 
     fstream file2;
     file2.open("Bitacora.txt", ios::app | ios::out);
@@ -192,7 +192,7 @@ void menuInformes()
     cout <<"\t\t\t----------------------------------"<<endl;
     cout <<"\t\t\t|BIENVENIDO AL MENU DE INFORMES  |"<<endl;
     cout <<"\t\t\t----------------------------------"<<endl;
-	cout<<"\t\t\t 1. Informes Datos Para Plantilla"<<endl;
+	cout<<"\t\t\t 1. Informes Datos Para Planilla"<<endl;
 	cout<<"\t\t\t 2. Informes Datos Para Usuarios Nuevos"<<endl;
 	cout<<"\t\t\t 3. Exit"<<endl;
 
@@ -212,7 +212,8 @@ void menuInformes()
 	    ingreso.desplegarUsurios();
 	    file2<<"\t\t\tAccion: Informes Datos para Usuarios - " <<accion13<<"\n"<<endl;
 		break;
-
+    case 3:
+        salir = true;
     default:
         cout<<"\t\t\t\nSaliendo del menu";
 	}

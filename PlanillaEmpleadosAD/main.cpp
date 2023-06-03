@@ -1,9 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "DatosEmpleado.h"
+#include "IngresarDatosEmpleado.h"
 #include "Usuarios.h"
 #include "Planilla.h"
 #include "bitacora.h"
+#include "aplicaciones.h"
 
 using namespace std;
 
@@ -12,16 +15,14 @@ void menuCatalogos();
 void menuProcesos();
 void menuInformes();
 
-
+string usuario, contrasena;
+Usuario ingreso;
 
 int main() {
-    string usuario, contrasena;
-    Usuario ingreso(usuario, contrasena);
     bool usuarioCorrecto = ingreso.verificarUsuario();
 
     if (usuarioCorrecto){
         menu();
-
     }
 
     return 0;
@@ -43,10 +44,11 @@ void menu()
 	do
     {
 	system("cls");
-
-    cout <<"\t\t\t----------------------------------"<<endl;
-    cout <<"\t\t\t |BIENVENIDO AL MENU PRINCIPAL|"<<endl;
-    cout <<"\t\t\t----------------------------------"<<endl;
+	string usuarioAutenticado = ingreso.getUsuarioAutenticado();
+    cout << "Usuario Autenticado: " <<usuarioAutenticado<< "\n"<< endl; // Mostrar el nombre de usuario autenticado
+    cout <<"\t\t\t--------------------------------"<<endl;
+    cout <<"\t\t\t| BIENVENIDO AL MENU PRINCIPAL |"<<endl;
+    cout <<"\t\t\t--------------------------------"<<endl;
 	cout<<"\t\t\t 1. Catalogos"<<endl;
 	cout<<"\t\t\t 2. Procesos"<<endl;
 	cout<<"\t\t\t 3. Informes"<<endl;
@@ -59,12 +61,18 @@ void menu()
     cin>>choice;
     switch(choice){
     case 1:
+        system("cls");
+        cout << "Usuario Autenticado: " <<usuarioAutenticado<< "\n"<< endl; // Mostrar el nombre de usuario autenticado
         menuCatalogos();
         break;
     case 2:
+        system("cls");
+        cout << "Usuario Autenticado: " <<usuarioAutenticado<< "\n"<< endl; // Mostrar el nombre de usuario autenticado
         menuProcesos();
         break;
     case 3:
+        system("cls");
+        cout << "Usuario Autenticado: " <<usuarioAutenticado<< "\n"<< endl; // Mostrar el nombre de usuario autenticado
         menuInformes();
         break;
     case 4:
