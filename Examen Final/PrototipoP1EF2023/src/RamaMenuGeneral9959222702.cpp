@@ -2,6 +2,7 @@
 #include "RamaAutenticador9959222702.h"
 #include "RamaCRUD_CatalogoX9959222702.h"
 #include "RamaProcesos9959222702.h"
+#include "RamaReportes9959222702.h"
 
 #include <iostream>
 #include <fstream>
@@ -42,6 +43,7 @@ void RamaMenuGeneral9959222702::menuPrincipal()
     RamaAutenticador9959222702 ingreso;
     RamaCRUD_CatalogoX9959222702 catalogos;
     RamaProcesos9959222702 procesos;
+    RamaReportes9959222702 reportes;
 
     // Obtiene el tiempo actual
     time_t tiempoActual = time(0);
@@ -88,7 +90,7 @@ void RamaMenuGeneral9959222702::menuPrincipal()
     case 3:
         system("cls");
         cout << "Usuario Autenticado: " <<usuarioAutenticado<< "\n"<< endl; // Mostrar el nombre de usuario autenticado
-        //menuInformes();
+        reportes.menuReportes();
         break;
     case 4:
 	    file2 << "\t\t\tHora en que salio del programa: " << fechaHoraLocal->tm_hour << ":" << fechaHoraLocal->tm_min << ":" << fechaHoraLocal->tm_sec <<"\n" << endl;

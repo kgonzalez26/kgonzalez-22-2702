@@ -85,7 +85,6 @@ void RamaCRUD_CatalogoX9959222702::menuRegistroAlumnos()
     int accion1 = 7002;
     int accion2 = 7003;
     int accion3 = 7004;
-    int accion4 = 7005;
 
 	do
     {
@@ -110,9 +109,21 @@ void RamaCRUD_CatalogoX9959222702::menuRegistroAlumnos()
     {
     case 1:
 		//alumno1.menuIngresarDatosEmpleado();
-		file2<<"\t\t\tAccion: Ingreso Datos del Alumno - " <<accion0<<"\n"<<endl;
+		file2<<"\t\t\tAccion: Ingreso de Datos del Alumno - " <<accion0<<"\n"<<endl;
 		break;
-	case 2:
+    case 2:
+		//alumno1.menuIngresarDatosEmpleado();
+		file2<<"\t\t\tAccion: Busqueda   Datos del Alumno - " <<accion1<<"\n"<<endl;
+		break;
+    case 3:
+		//alumno1.menuIngresarDatosEmpleado();
+		file2<<"\t\t\tAccion: Modificar  Datos del Alumno - " <<accion2<<"\n"<<endl;
+		break;
+    case 4:
+		//alumno1.menuIngresarDatosEmpleado();
+		file2<<"\t\t\tAccion: Reporte    Datos del Alumno - " <<accion3<<"\n"<<endl;
+		break;
+	case 5:
         salir = true;
         break;
     default:
@@ -134,17 +145,16 @@ void RamaCRUD_CatalogoX9959222702::menuRegistroMaestros()
 
 
     bool salir = false;
-    int choice;
+    int choice1;
     int x;
 
     fstream file2;
     file2.open("Bitacora.txt", ios::app | ios::out);
 
-    int accion0 = 7001;
-    int accion1 = 7002;
-    int accion2 = 7003;
-    int accion3 = 7004;
     int accion4 = 7005;
+    int accion5 = 7006;
+    int accion6 = 7007;
+    int accion7 = 7008;
 
 	do
     {
@@ -163,22 +173,34 @@ void RamaCRUD_CatalogoX9959222702::menuRegistroMaestros()
 	cout<<"\t\t\t Opcion a escoger:[1/2/3/4/5]"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"Ingresa tu Opcion: ";
-    cin>>choice;
+    cin>>choice1;
 
-    switch(choice)
+    switch(choice1)
     {
     case 1:
 		//alumno1.menuIngresarDatosEmpleado();
-		file2<<"\t\t\tAccion: Ingreso Datos del Maestro - " <<accion0<<"\n"<<endl;
+		file2<<"\t\t\tAccion: Ingreso de Datos del Maestro - " <<accion4<<"\n"<<endl;
 		break;
-	case 2:
+    case 2:
+		//alumno1.menuIngresarDatosEmpleado();
+		file2<<"\t\t\tAccion: Busqueda   Datos del Maestro - " <<accion5<<"\n"<<endl;
+		break;
+    case 3:
+		//alumno1.menuIngresarDatosEmpleado();
+		file2<<"\t\t\tAccion: Modificar  Datos del Maestro - " <<accion6<<"\n"<<endl;
+		break;
+    case 4:
+		//alumno1.menuIngresarDatosEmpleado();
+		file2<<"\t\t\tAccion: Reporte    Datos del Maestro - " <<accion7<<"\n"<<endl;
+		break;
+	case 5:
         salir = true;
         break;
     default:
         cout<<"\t\t\t\nSaliendo del menu";
 	}
 	getch();
-    }while(choice!= 2);
+    }while(choice1!= 5);
     file2.close();
 }
 

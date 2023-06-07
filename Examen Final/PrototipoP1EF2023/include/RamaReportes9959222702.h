@@ -8,6 +8,8 @@ class RamaReportes9959222702
         RamaReportes9959222702();
         virtual ~RamaReportes9959222702();
 
+        void menuReportes();
+
     protected:
 
     private:

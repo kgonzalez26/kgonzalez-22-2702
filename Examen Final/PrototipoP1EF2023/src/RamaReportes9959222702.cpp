@@ -20,16 +20,17 @@ RamaReportes9959222702::~RamaReportes9959222702()
     //dtor
 }
 
-void menuReportes()
+void RamaReportes9959222702::menuReportes()
 {
     fstream file2;
     file2.open("Bitacora.txt", ios::app | ios::out);
 
     int accion12 = 7022;
     int accion13 = 7023;
+    int accion14 = 7024;
 
     bool salir = false;
-    int choice;
+    int choice3;
 	do
     {
 	system("cls");
@@ -46,9 +47,9 @@ void menuReportes()
 	cout <<"\t\t\tOpcion a escoger:[1/2/3]"<<endl;
 	cout <<"\t\t\t------------------------------------------"<<endl;
 	cout <<"Ingresa tu Opcion: ";
-    cin>>choice;
+    cin>>choice3;
 
-    switch(choice)
+    switch(choice3)
     {
     case 1:
         //empleado.desplegar();
@@ -60,14 +61,13 @@ void menuReportes()
 		break;
     case 3:
 	    //ingreso.desplegarUsurios();
-	    file2<<"\t\t\tAccion: Reportes Alumnos solventes - " <<accion13<<"\n"<<endl;
+	    file2<<"\t\t\tAccion: Reportes Alumnos solventes - " <<accion14<<"\n"<<endl;
 		break;
-    case 4:
-        salir = true;
+
     default:
         cout<<"\t\t\t\nSaliendo del menu";
 	}
-	getch();
-    }while(choice!= 4);
+
+    }while(choice3!= 4);
     file2.close();
 }
