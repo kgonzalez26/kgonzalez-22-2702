@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1686150533 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\main.cpp
+	<iostream>
+	<fstream>
+
+1686150704 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\src\ramaautenticador9959222702.cpp
+	"RamaAutenticador9959222702.h"
+
+1686150786 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\include\ramaautenticador9959222702.h
+	<iostream>
+	<fstream>
+	<string>
+
