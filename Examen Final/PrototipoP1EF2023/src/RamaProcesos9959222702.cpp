@@ -1,4 +1,5 @@
 #include "RamaProcesos9959222702.h"
+#include "RamaProcesosAsignacionEstudiantes9959222702.h"
 
 #include <iostream>
 #include <fstream>
@@ -24,6 +25,8 @@ void RamaProcesos9959222702::menuProcesos()
 {
     fstream file2;
     file2.open("Bitacora.txt", ios::app | ios::out);
+
+    RamaProcesosAsignacionEstudiantes9959222702 procesosIngreso;
 
     int accion9 = 7018;
     int accion10 = 7019;
@@ -54,7 +57,7 @@ void RamaProcesos9959222702::menuProcesos()
     switch(choice2)
     {
     case 1:
-        //menuAsignacionCursos();
+        procesosIngreso.menuAsignacionCursos();
         file2<<"\t\t\tAccion: Reportes Asignacion de cursos Alumnos - " <<accion9<<"\n"<<endl;
 		break;
 	case 2:

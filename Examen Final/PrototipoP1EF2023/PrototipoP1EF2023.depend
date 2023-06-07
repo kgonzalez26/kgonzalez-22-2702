@@ -19,7 +19,7 @@
 
 1686153171 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\include\ramamenugeneral9959222702.h
 
-1686158185 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\src\ramamenugeneral9959222702.cpp
+1686158598 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\src\ramamenugeneral9959222702.cpp
 	"RamaMenuGeneral9959222702.h"
 	"RamaAutenticador9959222702.h"
 	"RamaCRUD_CatalogoX9959222702.h"
@@ -33,7 +33,7 @@
 	<conio.h>
 	<iomanip>
 
-1686157683 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\src\ramacrud_catalogox9959222702.cpp
+1686160964 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\src\ramacrud_catalogox9959222702.cpp
 	"RamaCRUD_CatalogoX9959222702.h"
 	"RamaAutenticador9959222702.h"
 	<iostream>
@@ -44,12 +44,16 @@
 	<conio.h>
 	<iomanip>
 
-1686155258 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\include\ramacrud_catalogox9959222702.h
+1686160612 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\include\ramacrud_catalogox9959222702.h
+	<iostream>
+	<fstream>
+	<string>
 
 1686156126 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\include\ramaprocesos9959222702.h
 
-1686158036 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\src\ramaprocesos9959222702.cpp
+1686160812 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\src\ramaprocesos9959222702.cpp
 	"RamaProcesos9959222702.h"
+	"RamaProcesosAsignacionEstudiantes9959222702.h"
 	<iostream>
 	<fstream>
 	<string>
@@ -58,7 +62,7 @@
 	<conio.h>
 	<iomanip>
 
-1686157835 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\src\ramareportes9959222702.cpp
+1686158801 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\src\ramareportes9959222702.cpp
 	"RamaReportes9959222702.h"
 	<iostream>
 	<fstream>
@@ -87,4 +91,19 @@
 	<cstdlib>
 	<conio.h>
 	<iomanip>
+
+1686161050 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\src\ramaprocesosasignacionestudiantes9959222702.cpp
+	"RamaProcesosAsignacionEstudiantes9959222702.h"
+	<iostream>
+	<fstream>
+	<string>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1686160834 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\include\ramaprocesosasignacionestudiantes9959222702.h
+	<iostream>
+	<fstream>
+	<string>
 
