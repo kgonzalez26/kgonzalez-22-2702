@@ -24,8 +24,6 @@ RamaCRUD_CatalogoX9959222702::~RamaCRUD_CatalogoX9959222702()
 
 void RamaCRUD_CatalogoX9959222702::menuCatalogos()
 {
-    string usuario, contrasena;
-    RamaAutenticador9959222702 ingreso;
 
     fstream file2;
     file2.open("Bitacora.txt", ios::app | ios::out);
@@ -34,7 +32,7 @@ void RamaCRUD_CatalogoX9959222702::menuCatalogos()
 
     bool salir = false;
     int choice;
-    char x;
+
 	do
     {
 	system("cls");
@@ -94,13 +92,16 @@ void RamaCRUD_CatalogoX9959222702::menuRegistroAlumnos()
 	system("cls");
 
     cout <<"\t\t\t---------------------------------------"<<endl;
-    cout <<"\t\t\t|MENU DE INGRESO DE DATOS DE PLANILLA|"<<endl;
+    cout <<"\t\t\t| MENU DE REGISTRO DE DATOS DE ALUMNO |"<<endl;
     cout <<"\t\t\t---------------------------------------"<<endl;
-	cout<<"\t\t\t 1. Ingreso de Datos del Empleado"<<endl;
-	cout<<"\t\t\t 2. Exit"<<endl;
+	cout<<"\t\t\t 1. Ingreso de Datos del Alumno"<<endl;
+	cout<<"\t\t\t 2. Busqueda   Datos del Alumno"<<endl;
+	cout<<"\t\t\t 3. Modificar  Datos del Alumno"<<endl;
+	cout<<"\t\t\t 4. Reporte    Datos del Alumno"<<endl;
+	cout<<"\t\t\t 5. Exit"<<endl;
 
 	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2]"<<endl;
+	cout<<"\t\t\t Opcion a escoger:[1/2/3/4/5]"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"Ingresa tu Opcion: ";
     cin>>choice;
@@ -150,13 +151,16 @@ void RamaCRUD_CatalogoX9959222702::menuRegistroMaestros()
 	system("cls");
 
     cout <<"\t\t\t---------------------------------------"<<endl;
-    cout <<"\t\t\t|MENU DE INGRESO DE DATOS DE PLANILLA|"<<endl;
+    cout <<"\t\t\t| MENU DE REGISTRO DE DATOS DE MAESTRO |"<<endl;
     cout <<"\t\t\t---------------------------------------"<<endl;
-	cout<<"\t\t\t 1. Ingreso de Datos del Empleado"<<endl;
-	cout<<"\t\t\t 2. Exit"<<endl;
+	cout<<"\t\t\t 1. Ingreso de Datos del Maestro"<<endl;
+	cout<<"\t\t\t 2. Busqueda   Datos del Maestro"<<endl;
+	cout<<"\t\t\t 3. Modificar  Datos del Maestro"<<endl;
+	cout<<"\t\t\t 4. Reporte    Datos del Maestro"<<endl;
+	cout<<"\t\t\t 5. Exit"<<endl;
 
 	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2]"<<endl;
+	cout<<"\t\t\t Opcion a escoger:[1/2/3/4/5]"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"Ingresa tu Opcion: ";
     cin>>choice;
