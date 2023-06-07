@@ -38,12 +38,14 @@
 		<Unit filename="include/IngresarDatosEmpleado.h" />
 		<Unit filename="include/Planilla.h" />
 		<Unit filename="include/Usuarios.h" />
+		<Unit filename="include/aplicaciones.h" />
 		<Unit filename="include/bitacora.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/DatosEmpleado.cpp" />
 		<Unit filename="src/IngresarDatosEmpleado.cpp" />
 		<Unit filename="src/Planilla.cpp" />
 		<Unit filename="src/Usuarios.cpp" />
+		<Unit filename="src/aplicaciones.cpp" />
 		<Unit filename="src/bitacora.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
