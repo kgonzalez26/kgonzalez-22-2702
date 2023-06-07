@@ -110,7 +110,7 @@ void RamaCRUD_CatalogoX9959222702::menuRegistroAlumnos()
     {
     case 1:
 		//alumno1.menuIngresarDatosEmpleado();
-		file2<<"\t\t\tAccion: Ingreso Datos del Empleado - " <<accion0<<"\n"<<endl;
+		file2<<"\t\t\tAccion: Ingreso Datos del Alumno - " <<accion0<<"\n"<<endl;
 		break;
 	case 2:
         salir = true;
@@ -169,7 +169,7 @@ void RamaCRUD_CatalogoX9959222702::menuRegistroMaestros()
     {
     case 1:
 		//alumno1.menuIngresarDatosEmpleado();
-		file2<<"\t\t\tAccion: Ingreso Datos del Empleado - " <<accion0<<"\n"<<endl;
+		file2<<"\t\t\tAccion: Ingreso Datos del Maestro - " <<accion0<<"\n"<<endl;
 		break;
 	case 2:
         salir = true;
