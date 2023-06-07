@@ -294,8 +294,8 @@ int contador = 0;  // Contador de intentos
 bool encontrado = false;  // Indica si se encontró el usuario y la contraseña correctos
 
 // El ciclo se repite mientras el número de intentos sea menor a 3 y no se haya encontrado un usuario válido
-while (contador < 3 && !encontrado) {
-
+while (contador < 3 && !encontrado)
+{
     // Limpiar la pantalla y mostrar el título del login
     system("cls");
     cout <<"\t\t\t---------------------"<<endl;

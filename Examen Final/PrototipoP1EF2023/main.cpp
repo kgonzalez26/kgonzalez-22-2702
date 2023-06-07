@@ -5,23 +5,12 @@
 #include "RamaAutenticador9959222702.h"
 #include "RamaMenuGeneral9959222702.h"
 
-#include <iostream>
-#include <fstream>
-
-using namespace std;
-
-string usuario, contrasena;
-RamaAutenticador9959222702 ingreso;
 
 int main()
 {
-    bool usuarioCorrecto = ingreso.verificarUsuario();
+    RamaMenuGeneral9959222702 inicio;
+    inicio.menu();
 
-    if (usuarioCorrecto)
-    {
-        RamaMenuGeneral9959222702 inicio;
-        inicio.menuPrincipal();
-    }
     return 0;
 }
 

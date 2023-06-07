@@ -1,5 +1,6 @@
 #include "RamaMenuGeneral9959222702.h"
 #include "RamaAutenticador9959222702.h"
+#include "RamaCRUD_CatalogoX9959222702.h"
 
 #include <iostream>
 #include <fstream>
@@ -21,10 +22,24 @@ RamaMenuGeneral9959222702::~RamaMenuGeneral9959222702()
     //dtor
 }
 
+void RamaMenuGeneral9959222702::menu()
+{
+    string usuario, contrasena;
+    RamaAutenticador9959222702 ingreso;
+
+    bool usuarioCorrecto = ingreso.verificarUsuario();
+
+    if (usuarioCorrecto)
+    {
+        menuPrincipal();
+    }
+}
+
 void RamaMenuGeneral9959222702::menuPrincipal()
 {
     fstream file2;
     RamaAutenticador9959222702 ingreso;
+    RamaCRUD_CatalogoX9959222702 catalogos;
 
     // Obtiene el tiempo actual
     time_t tiempoActual = time(0);
@@ -40,17 +55,20 @@ void RamaMenuGeneral9959222702::menuPrincipal()
     {
 	system("cls");
 	string usuarioAutenticado = ingreso.getUsuarioAutenticado();
-    cout << "Usuario Autenticado: " <<usuarioAutenticado<< "\n"<< endl; // Mostrar el nombre de usuario autenticado
+    cout << "Usuario Autenticado: " <<ingreso.getUsuarioAutenticado()<< "\n"<< endl; // Mostrar el nombre de usuario autenticado
+    cout << endl;
+    cout <<"\t\t\t| Kevin Eduardo Gonzalez Sosa  |"<<endl;
+    cout <<"\t\t\t|         9959-22-2702         |"<<endl;
     cout <<"\t\t\t--------------------------------"<<endl;
     cout <<"\t\t\t| BIENVENIDO AL MENU PRINCIPAL |"<<endl;
     cout <<"\t\t\t--------------------------------"<<endl;
-	cout<<"\t\t\t 1. Catalogos"<<endl;
-	cout<<"\t\t\t 2. Procesos"<<endl;
-	cout<<"\t\t\t 3. Informes"<<endl;
-	cout<<"\t\t\t 4. Salida"<<endl;
+	cout <<"\t\t\t 1. Catalogos"<<endl;
+	cout <<"\t\t\t 2. Procesos"<<endl;
+	cout <<"\t\t\t 3. Informes"<<endl;
+	cout <<"\t\t\t 4. Salida"<<endl;
 
 	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3/4]"<<endl;
+	cout<<"\t\t\t Opcion a escoger:[1/2/3/4]"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"Ingresa tu Opcion: ";
     cin>>choice;
@@ -58,7 +76,7 @@ void RamaMenuGeneral9959222702::menuPrincipal()
     case 1:
         system("cls");
         cout << "Usuario Autenticado: " <<usuarioAutenticado<< "\n"<< endl; // Mostrar el nombre de usuario autenticado
-        //menuCatalogos();
+        catalogos.menuCatalogos();
         break;
     case 2:
         system("cls");

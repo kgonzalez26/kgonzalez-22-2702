@@ -8,6 +8,7 @@ class RamaMenuGeneral9959222702
         RamaMenuGeneral9959222702();
         virtual ~RamaMenuGeneral9959222702();
 
+        void menu();
         void menuPrincipal();
 
     protected:
