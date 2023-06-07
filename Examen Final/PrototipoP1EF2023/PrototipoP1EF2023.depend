@@ -1,5 +1,7 @@
 # depslib dependency file v1.0
-1686150533 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\main.cpp
+1686152163 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\main.cpp
+	"RamaAutenticador9959222702.h"
+	"RamaMenuGeneral9959222702.h"
 	<iostream>
 	<fstream>
 
@@ -10,4 +12,17 @@
 	<iostream>
 	<fstream>
 	<string>
+
+1686151839 c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\include\ramamenugeneral9959222702.h
+
+1686152285 source:c:\users\kevin\desktop\umg 2022\umg semestre 3\programación i\clase 15feb\repositorio\kgonzalez-22-2702\examen final\prototipop1ef2023\src\ramamenugeneral9959222702.cpp
+	"RamaMenuGeneral9959222702.h"
+	"RamaAutenticador9959222702.h"
+	<iostream>
+	<fstream>
+	<string>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
 
